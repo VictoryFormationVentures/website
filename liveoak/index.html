@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Oak Reserve · Private Access</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="icon" href="../assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#111111; --panel:#181614; --rule:#2a2622; --text:#f6f2ea; --muted:#b8b0a0; --dim:#7a7469; --accent:#c9b37a; --display:'Aboreto',serif; --body:'Montserrat',sans-serif; --pad:clamp(20px,5vw,64px); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:var(--body); font-weight:300; line-height:1.6; }
+    a { color:inherit; }
+    .wrap { max-width:1100px; margin:0 auto; padding:0 var(--pad); }
+    h1,h2,h3 { font-family:var(--display); font-weight:400; margin:0; letter-spacing:.1em; }
+    .eyebrow { font-size:11px; letter-spacing:.34em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+    .btn { display:inline-block; padding:14px 28px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; font-weight:600; text-decoration:none; border:1px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; font-family:var(--body); }
+    .btn:hover { background:var(--accent); color:#111; }
+    .btn.solid { background:var(--accent); color:#111; }
+
+    /* gate */
+    #gate { position:fixed; inset:0; z-index:50; display:grid; place-items:center; background:#111; padding:24px; }
+    #gate .box { width:min(440px,100%); text-align:center; }
+    #gate img { height:70px; filter:brightness(0) invert(1); opacity:.9; margin-bottom:22px; }
+    #gate h1 { font-size:22px; letter-spacing:.3em; text-transform:uppercase; }
+    #gate p { color:var(--muted); font-size:13px; letter-spacing:.06em; margin:14px 0 26px; }
+    #gate input { width:100%; padding:14px 16px; background:#000; border:1px solid var(--rule); color:#fff; font-family:var(--body); font-size:16px; letter-spacing:.3em; text-align:center; }
+    #gate input:focus { outline:none; border-color:var(--accent); }
+    #gate .btn { width:100%; margin-top:12px; }
+    #gate .err { color:#d98c8c; font-size:12px; height:18px; margin-top:8px; }
+    #gate .back { display:block; margin-top:26px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); text-decoration:none; }
+    body.locked main { display:none; }
+
+    /* page */
+    header { border-bottom:1px solid var(--rule); }
+    .nav { display:flex; align-items:center; justify-content:space-between; height:72px; }
+    .brand { display:flex; align-items:center; gap:14px; text-decoration:none; }
+    .brand img { height:36px; filter:brightness(0) invert(1); }
+    .brand span { font-family:var(--display); font-size:13px; letter-spacing:.3em; text-transform:uppercase; }
+    .nav .tag { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--dim); }
+    .hero { position:relative; min-height:78vh; display:grid; place-items:center; text-align:center; overflow:hidden; }
+    .hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.55; }
+    .hero .inner { position:relative; max-width:820px; padding:90px var(--pad); }
+    .hero h1 { font-size:clamp(30px,5vw,58px); letter-spacing:.24em; text-transform:uppercase; line-height:1.15; }
+    .hero .sub { font-size:clamp(12px,1.4vw,15px); letter-spacing:.14em; text-transform:uppercase; color:var(--muted); line-height:1.9; margin:22px auto 30px; }
+    section { padding:88px 0; border-top:1px solid var(--rule); }
+    .lead { font-size:clamp(17px,2vw,21px); line-height:1.75; max-width:800px; }
+    .grid { display:grid; gap:22px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+    .card { background:var(--panel); border:1px solid var(--rule); padding:28px; }
+    .card h3 { font-size:15px; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
+    .card p { font-size:14px; color:var(--muted); margin:0; }
+    .rule { width:48px; height:1px; background:var(--accent); margin:18px 0 22px; }
+    .status { display:inline-block; padding:6px 12px; border:1px solid var(--rule); font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--dim); margin-bottom:18px; }
+    form { display:grid; gap:12px; grid-template-columns:1fr 1fr; max-width:720px; }
+    form .full { grid-column:1/-1; }
+    label { display:block; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--dim); margin-bottom:6px; }
+    input, select, textarea { width:100%; padding:13px 14px; background:#0c0b0a; border:1px solid var(--rule); color:#fff; font-family:var(--body); font-size:14px; }
+    @media (max-width:640px) { form { grid-template-columns:1fr; } }
+    footer { border-top:1px solid var(--rule); padding:36px 0; font-size:11px; color:var(--dim); letter-spacing:.06em; }
+    .notes { background:var(--panel); border:1px dashed var(--rule); padding:22px 26px; font-size:13px; color:var(--muted); }
+    .notes b { color:var(--text); }
+  </style>
+</head>
+<body class="locked">
+  <div id="gate">
+    <div class="box">
+      <img src="../assets/icon-arch-transparent.png" alt="" />
+      <h1>Private Access</h1>
+      <p>This page is a working concept for a future brand. Enter the access code to continue.</p>
+      <form onsubmit="return unlock(event)">
+        <input id="code" type="password" inputmode="text" autocomplete="off" placeholder="ACCESS CODE" />
+        <button class="btn solid" type="submit">Enter</button>
+        <div class="err" id="err"></div>
+      </form>
+      <a class="back" href="../">← Victory Formation Ventures</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="./"><img src="../assets/icon-arch-transparent.png" alt="" /><span>Live Oak Reserve</span></a>
+      <div class="tag">A Victory Formation Ventures brand · Concept</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <img src="https://images.unsplash.com/photo-1593463575615-8029ef7a01b9?w=2000&q=80" alt="Live oaks beside Hill Country water" />
+      <div class="inner">
+        <div class="eyebrow">Greater Austin · Estate &amp; New Construction</div>
+        <h1 style="margin-top:18px;">Live Oak Reserve</h1>
+        <p class="sub">Properties, market notes, and opportunities across Austin and the Hill Country, shared with our list before they reach the open market.</p>
+        <a class="btn" href="#access">Request private access</a>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <span class="status">Concept · not yet launched</span>
+        <div class="eyebrow">The Idea</div>
+        <h2 style="font-size:clamp(24px,3vw,36px); text-transform:uppercase; margin-top:10px;">A luxury brokerage brand for the homes we build and the estates we represent</h2>
+        <div class="rule"></div>
+        <p class="lead">Victory Formation Ventures buys land and builds homes. Live Oak Reserve is the brand those homes, and the estate and new-construction listings we represent for others, would be sold under: a curated, invitation-first marketplace for Austin's west side and the Hill Country, with an off-market list that sees inventory first.</p>
+        <p style="color:var(--muted); font-size:14px; max-width:800px;">The model borrows from the best luxury teams in other markets: a small, deeply prepared group, exceptional photography and film, honest pricing, and a private list that gets the first look. Launch depends on brokerage affiliation and Texas licensing, both in progress.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">What it would offer</div>
+        <div class="rule"></div>
+        <div class="grid">
+          <div class="card"><h3>Private Access List</h3><p>Coming-soon and off-market properties, market notes, and land opportunities, emailed to members before public marketing begins.</p></div>
+          <div class="card"><h3>Sellers</h3><p>Pricing built from real comps and our own build costs, launch-quality marketing, and a team that has stood on the other side of the closing table as the builder.</p></div>
+          <div class="card"><h3>Buyers</h3><p>Representation on estate homes and new construction, including the homes we build, with the option to design from the lot up.</p></div>
+          <div class="card"><h3>Neighborhoods</h3><p>Tarrytown, Westlake, Rollingwood, Lake Austin, Lakeway and Bee Cave, Dripping Springs, and the Georgetown and Leander hill country.</p></div>
+          <div class="card"><h3>Builders</h3><p>Back-end listing and marketing for the finished homes on lots we sourced, so a lot sale comes with a sales plan.</p></div>
+          <div class="card"><h3>Past Transactions</h3><p>A record of what we built and sold, by neighborhood, once the first homes close.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access">
+      <div class="wrap">
+        <div class="eyebrow">Private Access</div>
+        <h2 style="font-size:clamp(22px,3vw,32px); text-transform:uppercase; margin-top:10px;">Join the list</h2>
+        <div class="rule"></div>
+        <form onsubmit="return joinList(event)">
+          <div><label>Name</label><input name="name" required /></div>
+          <div><label>Email</label><input name="email" type="email" required /></div>
+          <div><label>Phone</label><input name="phone" type="tel" /></div>
+          <div><label>I am a</label><select name="type"><option>Buyer</option><option>Seller</option><option>Landowner</option><option>Builder</option><option>Investor</option><option>Agent</option></select></div>
+          <div class="full"><label>What are you looking for</label><textarea name="notes" rows="3" placeholder="Neighborhoods, budget, timing, anything helpful"></textarea></div>
+          <div class="full"><button class="btn solid" type="submit">Request access</button></div>
+        </form>
+        <p style="font-size:12px; color:var(--dim); margin-top:14px;">Until the brand launches, requests go to gabe@victoryformationventures.com.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Working notes (remove before launch)</div>
+        <div class="rule"></div>
+        <div class="notes">
+          <p><b>Name.</b> "Live Oak Reserve" leans on Austin's signature tree and the private-list idea. Alternatives if you want to test: Limestone Collective, Hill Country Reserve, Barton Creek Private, The Formation Collection.</p>
+          <p><b>What has to be true to launch.</b> Texas real estate licensing for whoever represents clients, a sponsoring broker or brokerage affiliation (Compass is the Eden Grove model; Austin options include Compass, Kuper Sotheby's, Moreland, Douglas Elliman), a photography and film partner, and an email platform for the Private Access list.</p>
+          <p><b>How the list would work.</b> The form above can post straight into a "VFV Private Access" Google Sheet the same way the dashboard forms do, so signups are captured from day one even before the brand goes public.</p>
+          <p><b>Access code.</b> Change it in this page's source (search for <code>ACCESS_CODE</code>). It is a courtesy gate to keep the concept out of search results, not a security measure.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">Live Oak Reserve is a working concept of Victory Formations Ventures LLC, Austin, Texas. Not yet offering brokerage services.</div></footer>
+
+  <script>
+    const ACCESS_CODE = 'liveoak';
+    const KEY = 'liveoak-access';
+    function unlock(e) {
+      e.preventDefault();
+      const v = document.getElementById('code').value.trim().toLowerCase();
+      if (v === ACCESS_CODE) { try { sessionStorage.setItem(KEY, '1'); } catch (_) {} document.body.classList.remove('locked'); document.getElementById('gate').style.display = 'none'; }
+      else { document.getElementById('err').textContent = 'That code did not match.'; }
+      return false;
+    }
+    try { if (sessionStorage.getItem(KEY) === '1') { document.body.classList.remove('locked'); document.getElementById('gate').style.display = 'none'; } } catch (_) {}
+    function joinList(e) {
+      e.preventDefault(); const f = e.target;
+      const body = encodeURIComponent('Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\nPhone: ' + f.phone.value + '\nType: ' + f.type.value + '\n\n' + f.notes.value);
+      location.href = 'mailto:gabe@victoryformationventures.com?subject=' + encodeURIComponent('[Live Oak Reserve] Private access request — ' + f.name.value) + '&body=' + body;
+      return false;
+    }
+  </script>
+</body>
+</html>
