@@ -92,6 +92,20 @@
     .band .inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
     .band blockquote { font-family: var(--display); font-size: clamp(18px, 2.6vw, 28px); letter-spacing: .08em; line-height: 1.6; margin: 0 0 18px; }
 
+
+    /* Tennessee division */
+    .ticker { overflow: hidden; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--panel); padding: 16px 0; }
+    .ticker .track { display: flex; width: max-content; animation: roll 42s linear infinite; }
+    .ticker span { font-family: var(--display); font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: var(--dim); padding: 0 34px; white-space: nowrap; }
+    .ticker span b { color: var(--accent); font-weight: 400; }
+    @keyframes roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .ticker .track { animation: none; } }
+    .division { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+    .division .box { background: var(--panel); border: 1px solid var(--rule); padding: 34px; }
+    .division .box .name { font-family: var(--display); font-size: 22px; letter-spacing: .22em; text-transform: uppercase; margin: 0 0 4px; }
+    .division .box .place { font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 16px; }
+    .division .box p { font-size: 14px; color: var(--muted); }
+    @media (max-width: 880px) { .division { grid-template-columns: 1fr; } }
     .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
     .person { background: var(--panel); border: 1px solid var(--rule); padding: 30px; }
     .person .role { font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); margin: 6px 0 14px; font-weight: 600; }
@@ -124,6 +138,7 @@
         <a href="#custom">Custom Homes</a>
         <a href="#markets">Markets</a>
         <a href="#about">About</a>
+        <a href="#tennessee">Tennessee</a>
         <a href="liveoak/">Private Access</a>
         <a href="#contact" class="cta">Contact</a>
       </nav>
@@ -155,7 +170,7 @@
     <section id="land">
       <div class="wrap">
         <div class="eyebrow">Services</div>
-        <h2>Five ways we work</h2>
+        <h2>Six ways we work</h2>
         <div class="rule"></div>
         <div class="grid g2">
           <article class="card" id="land-card">
@@ -176,10 +191,15 @@
           <article class="card" id="brokerage">
             <div class="num">04 · Brokerage</div>
             <h3>Sell to us, then let us find your next one</h3>
-            <p>Most people selling land or a house need somewhere to go. When you sell to us, we can represent you as your buyer's agent on the next home, and the two closings can be timed together so you're never carrying two mortgages or scrambling for a rental. For builders, we list and market the finished homes on the back end, so the lot we sold you comes with a sales plan.</p>
+            <p>Most people selling land or a house need somewhere to go. When you sell to us, we can represent you as your buyer's agent on the next home, and the two closings can be timed together so you're never carrying two mortgages or scrambling for a rental. One conversation, both sides handled.</p>
+          </article>
+          <article class="card" id="selling">
+            <div class="num">05 · Selling</div>
+            <h3>Listing and marketing for luxury spec builders</h3>
+            <p>Finished homes deserve a launch, not a listing. For the builders we work with, we handle the sale on the back end: pricing strategy, professional photography and film, a private preview to our buyer and agent network before the home goes public, and negotiation through closing. The lot we sold you comes with a sales plan.</p>
           </article>
           <article class="card" id="invest">
-            <div class="num">05 · Investment</div>
+            <div class="num">06 · Investment</div>
             <h3>Partner on the upside</h3>
             <p>For builders who want lots without carrying land, and for capital partners who want Austin residential exposure with a hands-on operator, we structure lot programs, joint ventures, and single-project investments with clear returns and clean reporting.</p>
           </article>
@@ -250,6 +270,30 @@
       </div>
     </section>
 
+    <section id="tennessee">
+      <div class="wrap division">
+        <div>
+          <div class="eyebrow">Our Tennessee division</div>
+          <h2>Founded in Nashville. Built for Austin.</h2>
+          <div class="rule"></div>
+          <p class="lead" style="font-size:17px;">Victory Formation Ventures grew out of The Stonehouse Company, the Nashville firm where our playbook was written: buy the ground well, develop it with discipline, and represent the client at every table. Stonehouse continues to run land, development, custom home representation, and brokerage across Middle Tennessee. We carry the same standards into Central Texas, and the two teams share deals, capital partners, builders, and referrals in both directions.</p>
+          <p style="font-size:13px; color:var(--dim);">Two markets, one team. If your move or your money crosses state lines, you're already talking to the right people.</p>
+        </div>
+        <div class="box">
+          <div class="name">The Stonehouse Company</div>
+          <div class="place">Nashville, Tennessee</div>
+          <p>Land acquisition, development, custom home representation, and brokerage in Middle Tennessee. Our founding branch and sister firm.</p>
+          <a class="btn" href="https://www.thestonehouseco.com" target="_blank" rel="noopener">Visit The Stonehouse Company</a>
+        </div>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true">
+      <div class="track">
+        <span>Austin, Texas <b>·</b> Victory Formation Ventures</span><span>Nashville, Tennessee <b>·</b> The Stonehouse Company</span><span>Travis <b>·</b> Williamson <b>·</b> Hays</span><span>Davidson <b>·</b> Williamson <b>·</b> Wilson</span><span>Land <b>·</b> Development <b>·</b> Custom Homes <b>·</b> Brokerage</span>
+        <span>Austin, Texas <b>·</b> Victory Formation Ventures</span><span>Nashville, Tennessee <b>·</b> The Stonehouse Company</span><span>Travis <b>·</b> Williamson <b>·</b> Hays</span><span>Davidson <b>·</b> Williamson <b>·</b> Wilson</span><span>Land <b>·</b> Development <b>·</b> Custom Homes <b>·</b> Brokerage</span>
+      </div>
+    </div>
+
     <section id="contact">
       <div class="wrap grid g2" style="gap:48px;">
         <div>
@@ -285,7 +329,7 @@
   <footer>
     <div class="wrap">
       <div class="row">
-        <div>© <span id="yr"></span> Victory Formations Ventures LLC · Austin, Texas</div>
+        <div>© <span id="yr"></span> Victory Formations Ventures LLC · Austin, Texas · Sister firm of <a href="https://www.thestonehouseco.com" target="_blank" rel="noopener">The Stonehouse Company</a>, Nashville</div>
         <div><a href="https://dashboard.victoryformationventures.com/">Team login</a></div>
       </div>
       <div class="credit">Photography via Unsplash.</div>
