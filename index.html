@@ -322,7 +322,8 @@
               <option>Something else</option>
             </select></div>
           <div class="full"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="5" placeholder="A property address, what you are looking for, or what you have in mind"></textarea></div>
-          <div class="full"><button class="btn" type="submit">Send</button></div>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="full"><button class="btn" type="submit">Send</button><p id="cf-note" style="margin:14px 0 0;font-size:13px;color:var(--ink-muted);" aria-live="polite"></p></div>
         </form>
       </div>
     </section>
@@ -337,13 +338,29 @@
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
-    // Contact form: opens the visitor's mail app pre-filled until a form backend is connected.
+    // Contact form: sends straight to gabe@victoryformationventures.com through FormSubmit (no visitor email app).
     function sendMail(e) {
       e.preventDefault();
-      const f = e.target;
-      const subject = encodeURIComponent('[VFV Website] ' + f.topic.value + ', ' + f.name.value);
-      const body = encodeURIComponent('Name: ' + f.name.value + '\nPhone: ' + f.phone.value + '\nEmail: ' + f.email.value + '\nReaching out as: ' + f.topic.value + '\n\n' + f.message.value);
-      location.href = 'mailto:gabe@victoryformationventures.com?subject=' + subject + '&body=' + body;
+      const f = e.target, btn = f.querySelector('button[type=submit]'), note = document.getElementById('cf-note');
+      if (f._honey.value) return false;
+      btn.disabled = true; btn.textContent = 'Sending';
+      fetch('https://formsubmit.co/ajax/gabe@victoryformationventures.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: '[VFV Website] ' + f.topic.value + ', ' + f.name.value,
+          _template: 'table', _captcha: 'false', _replyto: f.email.value,
+          Name: f.name.value, Phone: f.phone.value, Email: f.email.value,
+          'Reaching out about': f.topic.value, Message: f.message.value
+        })
+      }).then(r => r.json()).then(d => {
+        if (String(d.success) !== 'true') throw new Error(d.message || 'failed');
+        f.reset(); btn.textContent = 'Sent';
+        note.textContent = 'Thank you. We will be in touch shortly.';
+      }).catch(() => {
+        btn.disabled = false; btn.textContent = 'Send';
+        note.innerHTML = 'Something went wrong. Email us at <a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a>.';
+      });
       return false;
     }
   </script>
