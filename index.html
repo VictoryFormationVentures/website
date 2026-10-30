@@ -19,7 +19,7 @@
       --paper:#FBF8F2; --limestone:#F3EBDD; --sand:#D8CAB2; --ink:#1A1A18; --ink-muted:#5A564E;
       --stone:#8A8579; --rule:#E2D9C9; --oak:#4E5A3E;
       --display:'Aboreto', Georgia, serif; --body:'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-      --max:1120px; --pad:clamp(20px, 5vw, 64px);
+      --max:1200px; --pad:clamp(20px, 5vw, 64px);
     }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -45,7 +45,7 @@
     .nav { display:flex; align-items:center; justify-content:space-between; height:72px; gap:20px; }
     .brand { display:flex; align-items:center; gap:12px; text-decoration:none; }
     .brand img { height:36px; width:auto; }
-    .brand span { font-family:var(--display); font-size:13px; letter-spacing:.26em; text-transform:uppercase; }
+    .brand span { font-family:var(--display); font-size:12px; letter-spacing:.2em; text-transform:uppercase; }
     .links { display:flex; gap:24px; align-items:center; }
     .links a, .brand span { white-space:nowrap; }
     .links a { font-size:11px; letter-spacing:.22em; text-transform:uppercase; text-decoration:none; color:var(--ink-muted); font-weight:500; }
@@ -143,7 +143,6 @@
       <button class="menu-btn" type="button" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">Menu</button>
       <nav class="links">
         <a href="#work">How we work</a>
-        <a href="#approach">How we partner</a>
         <a href="liveoak/">Live Oak Reserve</a>
         <a href="#about">About</a>
         <a href="#contact" class="cta">Inquire</a>
