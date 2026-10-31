@@ -63,7 +63,8 @@
     .hero .bg { position:absolute; inset:-4%; background:url('https://images.unsplash.com/photo-1769913995907-e1cc7ff527a1?w=2400&q=80') center 55%/cover; animation:drift 32s ease-in-out infinite alternate; }
     .hero::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(21,22,19,.55) 0%, rgba(21,22,19,.18) 38%, rgba(21,22,19,.35) 70%, var(--ink) 100%); }
     @keyframes drift { from { transform:scale(1.04) translate3d(-1%,0,0); } to { transform:scale(1.12) translate3d(1.5%,-1%,0); } }
-    .hero .inner { position:relative; z-index:2; padding:0 var(--gutter); }
+    .hero .inner { position:relative; z-index:2; padding:60px var(--gutter); }
+    .hero .inner::before { content:""; position:absolute; inset:-30% -20%; z-index:-1; background:radial-gradient(closest-side, rgba(21,22,19,.55), rgba(21,22,19,0)); }
     .hero h1 { font-size:clamp(28px,5.4vw,64px); margin:0; letter-spacing:.34em; }
     .hero .team { margin-top:18px; color:var(--t2); }
     .hero .team b { font-weight:400; color:var(--t1); }
@@ -97,7 +98,7 @@
     section.block { padding:clamp(90px,11vw,150px) var(--gutter); border-top:1px solid var(--line); }
     .wrap { max-width:1180px; margin:0 auto; }
     .head { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(30px,6vw,90px); align-items:start; }
-    .head h2 { font-size:clamp(20px,2.6vw,32px); line-height:1.45; margin:16px 0 0; }
+    .head h2 { font-size:clamp(19px,2.3vw,29px); line-height:1.5; letter-spacing:.2em; margin:16px 0 0; }
     .head .eyebrow { color:var(--sand); }
     .head p { color:var(--t2); font-size:clamp(15px,1.3vw,17px); margin:0 0 18px; }
     .rule { width:46px; height:1px; background:var(--oak-hi); margin-top:28px; }
@@ -253,7 +254,7 @@
       <div class="tile-row">
         <a class="tile reveal" href="#standard"><img src="https://images.unsplash.com/photo-1603039531759-1a1bbe4f9f94?w=1100&q=80" alt="Stone fireplace in a warm living room" loading="lazy" /><div class="label cap">The Standard<span></span></div></a>
         <a class="tile reveal" href="#marketing"><img src="media/twilight.jpg" alt="Modern Hill Country home at twilight" loading="lazy" /><div class="label cap">Luxury Marketing<span></span></div></a>
-        <a class="tile reveal" href="#consult"><img src="https://images.unsplash.com/photo-1617351165725-ec1c8ca2bf67?w=1100&q=80" alt="Lamp and telephone on a wooden desk" loading="lazy" /><div class="label cap">Book a Consultation<span></span></div></a>
+        <a class="tile reveal" href="#consult"><img src="https://images.unsplash.com/photo-1634392885534-7655859fb2f8?w=1100&q=80" alt="Dark wood dining room set for a conversation" loading="lazy" /><div class="label cap">Book a Consultation<span></span></div></a>
       </div>
     </section>
 
