@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Past Transactions · Live Oak Reserve</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#151613" />
+  <meta name="description" content="Homes Live Oak Reserve has sold and represented." />
+  <link rel="icon" href="../assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/lo.css" />
+</head>
+<body class="locked" data-page="past">
+  <div id="gate">
+    <div class="box">
+      <div class="display mark">Live Oak Reserve</div>
+      <div class="cap sub">Private access by introduction</div>
+      <form onsubmit="return loUnlock(event)">
+        <input id="code" type="password" autocomplete="off" placeholder="Access code" aria-label="Access code" />
+        <button type="submit" aria-label="Enter">&rarr;</button>
+      </form>
+      <div class="err" id="err"></div>
+      <a class="cap back" href="../">Victory Formation Ventures</a>
+    </div>
+  </div>
+
+  <header class="bar" id="bar">
+    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small><em class="ph">[Brokerage Name]</em></small></a>
+    <nav class="cap" aria-label="Main">
+      <div class="dd"><button type="button" aria-haspopup="true">Residential</button><div class="menu"><a href="properties.html">Properties</a><a href="sellers.html">Sellers</a><a href="buyers.html">Buyers</a><a href="neighborhoods.html">Neighborhoods</a><a href="marketing.html">Marketing</a><a href="past-transactions.html">Past Transactions</a></div></div>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="loDrawer(true)"><span></span><span></span></button>
+  </header>
+  <div class="drawer" id="drawer">
+    <button class="close" aria-label="Close" onclick="loDrawer(false)">&times;</button>
+    <a href="./" onclick="loDrawer(false)">Home</a>
+    <a href="properties.html" onclick="loDrawer(false)">Residential</a>
+    <div class="sub"><a href="properties.html" onclick="loDrawer(false)">Properties</a><a href="sellers.html" onclick="loDrawer(false)">Sellers</a><a href="buyers.html" onclick="loDrawer(false)">Buyers</a><a href="neighborhoods.html" onclick="loDrawer(false)">Neighborhoods</a><a href="marketing.html" onclick="loDrawer(false)">Marketing</a><a href="past-transactions.html" onclick="loDrawer(false)">Past Transactions</a></div>
+    <a href="team.html" onclick="loDrawer(false)">Team</a>
+    <a href="contact.html" onclick="loDrawer(false)">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="banner"><div class="bg" style="background-image:url('media/pool.jpg')"></div>
+      <div class="inner reveal"><div class="cap eyebrow">Residential</div><h1 class="display">Past Transactions</h1>
+      <p>A record of the homes we have sold and represented across the Texas Hill Country.</p></div></section>
+    <section class="listings"><div class="listings__grid" id="grid"></div></section>
+  </main>
+
+  <footer class="foot">
+    <div class="brand display">Live Oak Reserve</div>
+    <div class="cols3">
+      <div><h4 class="cap">Sitemap</h4><ul><li><a href="./">Home</a></li><li><a href="properties.html">Residential</a></li><li><a href="sellers.html">Sellers</a></li><li><a href="buyers.html">Buyers</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      <div><h4 class="cap">Contact</h4><ul><li><a href="tel:+17376005101">(737) 600-5101</a></li><li><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></li><li><a href="https://instagram.com/liveoakreservetx" target="_blank" rel="noopener">@liveoakreservetx</a></li></ul></div>
+      <div><h4 class="cap">Address</h4><ul><li>3004 Webberville Road #2</li><li>Austin, TX 78702</li></ul></div>
+    </div>
+    <div class="legal">
+      <div class="bk"><em class="ph">[Brokerage logo]</em></div>
+      <p>Live Oak Reserve is a team at <b><em class="ph">[Brokerage Name]</em></b>, a project of Victory Formation Ventures LLC<br>
+      <em class="ph">[Brokerage address]</em> &middot; Firm license <em class="ph">[License #]</em><br>
+      Office <em class="ph">[Office phone]</em> &middot; Equal Housing Opportunity</p>
+    </div>
+    <div class="extra">
+      <span><a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener">Texas Real Estate Commission Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
+      <span>&copy; <span class="js-yr"></span> Victory Formation Ventures LLC &middot; <a href="https://dashboard.victoryformationventures.com/">Team login</a></span>
+    </div>
+  </footer>
+  <script src="assets/lo.js"></script>
+  <script src="assets/props.js"></script>
+  <script>
+    fetch('data/past.json').then(r => r.json()).then(list => {
+      const g = document.getElementById('grid');
+      if (!list.length) { g.outerHTML = '<div class="empty reveal"><div class="cap eyebrow">Austin</div><h2 class="display">Our Austin record starts here</h2><p>Every home we sell in the Hill Country will be listed on this page. The same team has been closing luxury homes and land in Nashville, and we are bringing that playbook to Austin.</p><a class="btn" href="team.html">Meet the team</a></div>'; loReveal(); return; }
+      g.innerHTML = list.map(p => propCard(Object.assign({ sold: true }, p))).join(''); loReveal(g);
+    });
+  </script>
+</body>
+</html>

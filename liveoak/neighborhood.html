@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Neighborhood · Live Oak Reserve</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#151613" />
+  <meta name="description" content="A Live Oak Reserve neighborhood guide." />
+  <link rel="icon" href="../assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/lo.css" />
+</head>
+<body class="locked" data-page="neighborhood">
+  <div id="gate">
+    <div class="box">
+      <div class="display mark">Live Oak Reserve</div>
+      <div class="cap sub">Private access by introduction</div>
+      <form onsubmit="return loUnlock(event)">
+        <input id="code" type="password" autocomplete="off" placeholder="Access code" aria-label="Access code" />
+        <button type="submit" aria-label="Enter">&rarr;</button>
+      </form>
+      <div class="err" id="err"></div>
+      <a class="cap back" href="../">Victory Formation Ventures</a>
+    </div>
+  </div>
+
+  <header class="bar" id="bar">
+    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small><em class="ph">[Brokerage Name]</em></small></a>
+    <nav class="cap" aria-label="Main">
+      <div class="dd"><button type="button" aria-haspopup="true">Residential</button><div class="menu"><a href="properties.html">Properties</a><a href="sellers.html">Sellers</a><a href="buyers.html">Buyers</a><a href="neighborhoods.html">Neighborhoods</a><a href="marketing.html">Marketing</a><a href="past-transactions.html">Past Transactions</a></div></div>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="loDrawer(true)"><span></span><span></span></button>
+  </header>
+  <div class="drawer" id="drawer">
+    <button class="close" aria-label="Close" onclick="loDrawer(false)">&times;</button>
+    <a href="./" onclick="loDrawer(false)">Home</a>
+    <a href="properties.html" onclick="loDrawer(false)">Residential</a>
+    <div class="sub"><a href="properties.html" onclick="loDrawer(false)">Properties</a><a href="sellers.html" onclick="loDrawer(false)">Sellers</a><a href="buyers.html" onclick="loDrawer(false)">Buyers</a><a href="neighborhoods.html" onclick="loDrawer(false)">Neighborhoods</a><a href="marketing.html" onclick="loDrawer(false)">Marketing</a><a href="past-transactions.html" onclick="loDrawer(false)">Past Transactions</a></div>
+    <a href="team.html" onclick="loDrawer(false)">Team</a>
+    <a href="contact.html" onclick="loDrawer(false)">Contact</a>
+  </div>
+
+  <main id="top">
+    <div id="hood"><section class="thero"><div><div class="cap eyebrow">Loading</div></div></section></div>
+  </main>
+
+  <footer class="foot">
+    <div class="brand display">Live Oak Reserve</div>
+    <div class="cols3">
+      <div><h4 class="cap">Sitemap</h4><ul><li><a href="./">Home</a></li><li><a href="properties.html">Residential</a></li><li><a href="sellers.html">Sellers</a></li><li><a href="buyers.html">Buyers</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      <div><h4 class="cap">Contact</h4><ul><li><a href="tel:+17376005101">(737) 600-5101</a></li><li><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></li><li><a href="https://instagram.com/liveoakreservetx" target="_blank" rel="noopener">@liveoakreservetx</a></li></ul></div>
+      <div><h4 class="cap">Address</h4><ul><li>3004 Webberville Road #2</li><li>Austin, TX 78702</li></ul></div>
+    </div>
+    <div class="legal">
+      <div class="bk"><em class="ph">[Brokerage logo]</em></div>
+      <p>Live Oak Reserve is a team at <b><em class="ph">[Brokerage Name]</em></b>, a project of Victory Formation Ventures LLC<br>
+      <em class="ph">[Brokerage address]</em> &middot; Firm license <em class="ph">[License #]</em><br>
+      Office <em class="ph">[Office phone]</em> &middot; Equal Housing Opportunity</p>
+    </div>
+    <div class="extra">
+      <span><a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener">Texas Real Estate Commission Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
+      <span>&copy; <span class="js-yr"></span> Victory Formation Ventures LLC &middot; <a href="https://dashboard.victoryformationventures.com/">Team login</a></span>
+    </div>
+  </footer>
+  <script src="assets/lo.js"></script>
+  <script>
+    const HIMG = {"westlake": "https://images.unsplash.com/photo-1618880542228-d188d60a1c0b?w=2000&q=80", "tarrytown": "https://images.unsplash.com/photo-1747258818911-dfde27ecabba?w=1600&q=80", "rollingwood": "https://images.unsplash.com/photo-1604705053169-4d4e622f1353?w=2000&q=80", "barton-creek": "https://images.unsplash.com/photo-1604707134701-6712b5e30e12?w=2000&q=80", "lake-austin": "media/penny.jpg", "lakeway": "media/travis.jpg", "lakeway-lake-travis": "media/travis.jpg", "dripping-springs": "https://images.unsplash.com/photo-1607451498705-5f265aeb83a4?w=2000&q=80", "georgetown": "https://images.unsplash.com/photo-1627515865509-f821bebb7524?w=2000&q=80", "spanish-oaks": "https://images.unsplash.com/photo-1568041968442-5db8b9b41156?w=2000&q=80", "rough-hollow": "https://images.unsplash.com/photo-1629767175732-9e21f04429aa?w=2000&q=80", "the-hills": "media/hilllake.jpg", "costa-bella": "https://images.unsplash.com/photo-1621483053395-462ce1337668?w=2000&q=80", "caliterra": "media/oaksunset.jpg", "headwaters": "media/bluff.jpg"};
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const slug = new URLSearchParams(location.search).get('n');
+    fetch('data/neighborhoods.json').then(r => r.json()).then(all => {
+      const h = all.find(x => x.slug === slug), el = document.getElementById('hood');
+      if (!h) { location.replace('neighborhoods.html'); return; }
+      document.title = h.name + ' · Live Oak Reserve';
+      const list = (title, arr) => arr && arr.length ? `<section class="p-sec"><div class="wrap"><h2 class="display reveal">${title}</h2><div class="qa">${arr.map(x => `<div class="reveal"><h3>${esc(x.name)}</h3><p>${esc(x.line)}</p></div>`).join('')}</div></div></section>` : '';
+      const others = all.filter(x => x.slug !== h.slug && x.group === h.group).slice(0, 4);
+      el.innerHTML = `
+        <section class="banner"><div class="bg" style="background-image:url('${HIMG[h.slug] || 'https://images.unsplash.com/photo-1629767175742-768f60bf924e?w=2400&q=80'}')"></div>
+          <div class="inner reveal"><div class="cap eyebrow">${h.group === 'development' ? 'Luxury Development' : 'Luxury Area'}</div><h1 class="display">${esc(h.name)}</h1><p>${esc(h.place)}${h.schools ? ' &middot; ' + esc(h.schools) : ''}</p></div></section>
+        <section class="p-sec"><div class="wrap"><h2 class="display reveal">What to expect</h2>
+          <div class="qa"><div class="reveal"><h3>The setting</h3><p>${esc(h.setting)}</p></div><div class="reveal"><h3>The homes</h3><p>${esc(h.houses)}</p></div></div></div></section>
+        ${list('Things to do', h.todo)}${list('Dining', h.dining)}${list('Golf and clubs', h.clubs)}
+        ${h.commute && h.commute.length ? `<section class="p-sec"><div class="wrap"><h2 class="display reveal">Drive times</h2><div class="spec">${h.commute.map(c => `<div class="reveal"><div class="cap k">${esc(c.to)}</div><div class="v">${esc(c.time)}</div></div>`).join('')}</div>
+          <p style="margin-top:22px"><a class="cap linkline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/${encodeURIComponent(h.name + ' ' + (h.place||'') + ' Texas')}">Get directions</a></p></div></section>` : ''}
+        <section class="p-sec"><div class="wrap"><h2 class="display reveal">Explore other ${h.group === 'development' ? 'developments' : 'areas'}</h2>
+          <div class="hoods__grid">${others.map(o => `<a class="hood reveal" href="neighborhood.html?n=${o.slug}"><img src="${HIMG[o.slug] || 'https://images.unsplash.com/photo-1629767175742-768f60bf924e?w=2400&q=80'}" alt="" loading="lazy" /><span class="hood__name">${esc(o.name)}</span></a>`).join('')}</div></div></section>
+        <section class="p-sec"><div class="narrow" style="text-align:center"><h2 class="display reveal js-cname">The Limestone Collection</h2><p class="reveal" style="color:var(--t2)">Private exclusives in ${esc(h.name)} and across the Hill Country go to members first.</p><p class="reveal" style="margin-top:28px"><a class="btn" href="index.html#collection">Request access</a></p></div></section>`;
+      document.querySelectorAll('.js-cname').forEach(e => e.textContent = LO.COLLECTION); loReveal(el);
+    });
+  </script>
+</body>
+</html>

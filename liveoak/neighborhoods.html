@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Luxury Neighborhoods in Austin and the Hill Country · Live Oak Reserve</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#151613" />
+  <meta name="description" content="The Austin and Texas Hill Country neighborhoods and developments Live Oak Reserve knows street by street." />
+  <link rel="icon" href="../assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/lo.css" />
+</head>
+<body class="locked" data-page="neighborhoods">
+  <div id="gate">
+    <div class="box">
+      <div class="display mark">Live Oak Reserve</div>
+      <div class="cap sub">Private access by introduction</div>
+      <form onsubmit="return loUnlock(event)">
+        <input id="code" type="password" autocomplete="off" placeholder="Access code" aria-label="Access code" />
+        <button type="submit" aria-label="Enter">&rarr;</button>
+      </form>
+      <div class="err" id="err"></div>
+      <a class="cap back" href="../">Victory Formation Ventures</a>
+    </div>
+  </div>
+
+  <header class="bar" id="bar">
+    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small><em class="ph">[Brokerage Name]</em></small></a>
+    <nav class="cap" aria-label="Main">
+      <div class="dd"><button type="button" aria-haspopup="true">Residential</button><div class="menu"><a href="properties.html">Properties</a><a href="sellers.html">Sellers</a><a href="buyers.html">Buyers</a><a href="neighborhoods.html">Neighborhoods</a><a href="marketing.html">Marketing</a><a href="past-transactions.html">Past Transactions</a></div></div>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="loDrawer(true)"><span></span><span></span></button>
+  </header>
+  <div class="drawer" id="drawer">
+    <button class="close" aria-label="Close" onclick="loDrawer(false)">&times;</button>
+    <a href="./" onclick="loDrawer(false)">Home</a>
+    <a href="properties.html" onclick="loDrawer(false)">Residential</a>
+    <div class="sub"><a href="properties.html" onclick="loDrawer(false)">Properties</a><a href="sellers.html" onclick="loDrawer(false)">Sellers</a><a href="buyers.html" onclick="loDrawer(false)">Buyers</a><a href="neighborhoods.html" onclick="loDrawer(false)">Neighborhoods</a><a href="marketing.html" onclick="loDrawer(false)">Marketing</a><a href="past-transactions.html" onclick="loDrawer(false)">Past Transactions</a></div>
+    <a href="team.html" onclick="loDrawer(false)">Team</a>
+    <a href="contact.html" onclick="loDrawer(false)">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="banner"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1629767175742-768f60bf924e?w=2400&q=80')"></div>
+      <div class="inner reveal"><div class="cap eyebrow">Residential</div><h1 class="display">Luxury Neighborhoods</h1>
+      <p>Austin and the Texas Hill Country hold some of the most varied residential land in the country: tree-lined streets minutes from downtown, waterfront on the lakes, and estate acreage in the hills beyond them. These are the places we know street by street, across Travis, Williamson and Hays counties.</p></div></section>
+    <section class="hoods"><p class="cap hoods__h">Luxury Areas</p><div class="hoods__grid"></div></section>
+    <section class="hoods"><p class="cap hoods__h">Luxury Developments</p><div class="hoods__grid"></div></section>
+    <section class="collection" id="collection">
+      <div class="bg" role="img" aria-label="Aerial view of Hill Country lake and hills"></div>
+      <div class="inner"><div class="reveal">
+        <h2 class="display js-cname">The Limestone Collection</h2>
+        <p>Private exclusives, market notes and opportunities across the Texas Hill Country, shared with our list before they reach the open market.</p>
+        <form class="js-collection">
+          <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address" />
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" />
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <div class="fine js-note">By signing up you agree to our <a href="terms.html">Terms and Conditions</a>. Every request is reviewed personally.</div>
+      </div></div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="brand display">Live Oak Reserve</div>
+    <div class="cols3">
+      <div><h4 class="cap">Sitemap</h4><ul><li><a href="./">Home</a></li><li><a href="properties.html">Residential</a></li><li><a href="sellers.html">Sellers</a></li><li><a href="buyers.html">Buyers</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      <div><h4 class="cap">Contact</h4><ul><li><a href="tel:+17376005101">(737) 600-5101</a></li><li><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></li><li><a href="https://instagram.com/liveoakreservetx" target="_blank" rel="noopener">@liveoakreservetx</a></li></ul></div>
+      <div><h4 class="cap">Address</h4><ul><li>3004 Webberville Road #2</li><li>Austin, TX 78702</li></ul></div>
+    </div>
+    <div class="legal">
+      <div class="bk"><em class="ph">[Brokerage logo]</em></div>
+      <p>Live Oak Reserve is a team at <b><em class="ph">[Brokerage Name]</em></b>, a project of Victory Formation Ventures LLC<br>
+      <em class="ph">[Brokerage address]</em> &middot; Firm license <em class="ph">[License #]</em><br>
+      Office <em class="ph">[Office phone]</em> &middot; Equal Housing Opportunity</p>
+    </div>
+    <div class="extra">
+      <span><a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener">Texas Real Estate Commission Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
+      <span>&copy; <span class="js-yr"></span> Victory Formation Ventures LLC &middot; <a href="https://dashboard.victoryformationventures.com/">Team login</a></span>
+    </div>
+  </footer>
+  <script src="assets/lo.js"></script>
+
+</body>
+</html>
