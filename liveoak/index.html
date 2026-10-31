@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/icon-192.png" />
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#1A1A18; --panel:#232320; --rule:#3A3832; --text:#F3EBDD; --muted:#D8CAB2; --dim:#A8A090; --accent:#F3EBDD; --display:'Aboreto',serif; --body:'Montserrat',sans-serif; --pad:clamp(20px,5vw,64px); }
+    :root { --bg:#1A1A18; --panel:#232320; --rule:#3A3832; --text:#F3EBDD; --muted:#D8CAB2; --dim:#A8A090; --accent:#F3EBDD; --oak:#4E5A3E; --oak-deep:#3F4932; --display:'Aboreto',serif; --body:'Montserrat',sans-serif; --pad:clamp(20px,5vw,64px); }
     * { box-sizing:border-box; }
     body { margin:0; background:var(--bg); color:var(--text); font-family:var(--body); font-weight:300; line-height:1.6; }
     a { color:inherit; }
@@ -51,13 +51,23 @@
     .card { background:var(--panel); border:1px solid var(--rule); padding:28px; }
     .card h3 { font-size:15px; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
     .card p { font-size:14px; color:var(--muted); margin:0; }
-    .rule { width:48px; height:1px; background:var(--accent); margin:18px 0 22px; }
+    .rule { width:56px; height:2px; background:var(--oak); margin:18px 0 22px; }
     .status { display:inline-block; padding:6px 12px; border:1px solid var(--rule); font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--dim); margin-bottom:18px; }
     form { display:grid; gap:12px; grid-template-columns:1fr 1fr; max-width:720px; }
     form .full { grid-column:1/-1; }
     label { display:block; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--dim); margin-bottom:6px; }
     input, select, textarea { width:100%; padding:13px 14px; background:var(--panel); border:1px solid var(--rule); color:var(--text); font-family:var(--body); font-size:14px; }
     @media (max-width:640px) { form { grid-template-columns:1fr; } }
+
+    section.oak { background:var(--oak); border-top:0; }
+    section.oak .eyebrow { color:var(--text); opacity:.8; }
+    section.oak .rule { background:var(--text); opacity:.6; }
+    section.oak .card { background:rgba(26,26,24,.18); border-color:rgba(243,235,221,.22); }
+    section.oak .card p { color:rgba(243,235,221,.86); }
+    section.oak + section { border-top:0; }
+    .hero .eyebrow { color:var(--muted); }
+    .btn.solid:hover { background:var(--oak); border-color:var(--oak); color:var(--text); }
+    input:focus, select:focus, textarea:focus { outline:none; border-color:var(--oak); }
     footer { border-top:1px solid var(--rule); padding:36px 0; font-size:11px; color:var(--dim); letter-spacing:.06em; }
     .notes { background:var(--panel); border:1px dashed var(--rule); padding:22px 26px; font-size:13px; color:var(--muted); }
     .notes b { color:var(--text); }
@@ -147,7 +157,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="oak">
       <div class="wrap">
         <div class="eyebrow">How a sale runs</div>
         <h2 style="font-size:clamp(22px,3vw,32px); text-transform:uppercase; margin-top:10px;">Three-phase launch</h2>
