@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/icon-192.png" />
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#1A1A18; --panel:#232320; --rule:#3A3832; --text:#F3EBDD; --muted:#D8CAB2; --dim:#A8A090; --accent:#F3EBDD; --display:'Aboreto',serif; --body:'Montserrat',sans-serif; --pad:clamp(20px,5vw,64px); }
+    :root { --bg:#1A1A18; --panel:#232320; --rule:#3A3832; --text:#F3EBDD; --muted:#D8CAB2; --dim:#A8A090; --accent:#F3EBDD; --oak:#4E5A3E; --oak-deep:#3F4932; --display:'Aboreto',serif; --body:'Montserrat',sans-serif; --pad:clamp(20px,5vw,64px); }
     * { box-sizing:border-box; }
     body { margin:0; background:var(--bg); color:var(--text); font-family:var(--body); font-weight:300; line-height:1.6; }
     a { color:inherit; }
@@ -23,7 +23,7 @@
     /* gate */
     #gate { position:fixed; inset:0; z-index:50; display:grid; place-items:center; background:var(--bg); padding:24px; }
     #gate .box { width:min(440px,100%); text-align:center; }
-    #gate img { height:150px; width:150px; border-radius:50%; margin-bottom:22px; }
+    #gate img { height:70px; filter:brightness(0) invert(1); opacity:.9; margin-bottom:22px; }
     #gate h1 { font-size:22px; letter-spacing:.3em; text-transform:uppercase; }
     #gate p { color:var(--muted); font-size:13px; letter-spacing:.06em; margin:14px 0 26px; }
     #gate input { width:100%; padding:14px 16px; background:var(--panel); border:1px solid var(--rule); color:var(--text); font-family:var(--body); font-size:16px; letter-spacing:.3em; text-align:center; }
@@ -37,7 +37,7 @@
     header { border-bottom:1px solid var(--rule); }
     .nav { display:flex; align-items:center; justify-content:space-between; height:72px; }
     .brand { display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .brand img { height:40px; width:40px; border-radius:50%; }
+    .brand img { height:36px; filter:brightness(0) invert(1); }
     .brand span { font-family:var(--display); font-size:13px; letter-spacing:.3em; text-transform:uppercase; }
     .nav .tag { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--dim); }
     .hero { position:relative; min-height:78vh; display:grid; place-items:center; text-align:center; overflow:hidden; }
@@ -51,13 +51,23 @@
     .card { background:var(--panel); border:1px solid var(--rule); padding:28px; }
     .card h3 { font-size:15px; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
     .card p { font-size:14px; color:var(--muted); margin:0; }
-    .rule { width:48px; height:1px; background:var(--accent); margin:18px 0 22px; }
+    .rule { width:56px; height:2px; background:var(--oak); margin:18px 0 22px; }
     .status { display:inline-block; padding:6px 12px; border:1px solid var(--rule); font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--dim); margin-bottom:18px; }
     form { display:grid; gap:12px; grid-template-columns:1fr 1fr; max-width:720px; }
     form .full { grid-column:1/-1; }
     label { display:block; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--dim); margin-bottom:6px; }
     input, select, textarea { width:100%; padding:13px 14px; background:var(--panel); border:1px solid var(--rule); color:var(--text); font-family:var(--body); font-size:14px; }
     @media (max-width:640px) { form { grid-template-columns:1fr; } }
+
+    section.oak { background:var(--oak); border-top:0; }
+    section.oak .eyebrow { color:var(--text); opacity:.8; }
+    section.oak .rule { background:var(--text); opacity:.6; }
+    section.oak .card { background:rgba(26,26,24,.18); border-color:rgba(243,235,221,.22); }
+    section.oak .card p { color:rgba(243,235,221,.86); }
+    section.oak + section { border-top:0; }
+    .hero .eyebrow { color:var(--muted); }
+    .btn.solid:hover { background:var(--oak); border-color:var(--oak); color:var(--text); }
+    input:focus, select:focus, textarea:focus { outline:none; border-color:var(--oak); }
     footer { border-top:1px solid var(--rule); padding:36px 0; font-size:11px; color:var(--dim); letter-spacing:.06em; }
     .notes { background:var(--panel); border:1px dashed var(--rule); padding:22px 26px; font-size:13px; color:var(--muted); }
     .notes b { color:var(--text); }
@@ -66,7 +76,7 @@
 <body class="locked">
   <div id="gate">
     <div class="box">
-      <img src="../assets/live-oak-emblem.webp" alt="Live Oak Reserve emblem" class="emblem" />
+      <img src="../assets/icon-arch-transparent.png" alt="" />
       <h1>Private Access</h1>
       <p>Private access by introduction. Enter your access code to continue.</p>
       <form onsubmit="return unlock(event)">
@@ -80,7 +90,7 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="./"><img src="../assets/live-oak-emblem-sm.webp" alt="" class="brand-emblem" /><span>Live Oak Reserve</span></a>
+      <a class="brand" href="./"><img src="../assets/icon-arch-transparent.png" alt="" /><span>Live Oak Reserve</span></a>
       <div class="tag">A Victory Formation Ventures brand</div>
     </div>
   </header>
@@ -147,7 +157,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="oak">
       <div class="wrap">
         <div class="eyebrow">How a sale runs</div>
         <h2 style="font-size:clamp(22px,3vw,32px); text-transform:uppercase; margin-top:10px;">Three-phase launch</h2>
@@ -178,22 +188,10 @@
           <div class="full"><label>What are you looking for</label><textarea name="notes" rows="3" placeholder="Neighborhoods, budget, timing, anything helpful"></textarea></div>
           <div class="full"><button class="btn solid" type="submit">Request access</button></div>
         </form>
-        <p style="font-size:12px; color:var(--dim); margin-top:14px;">Until the brand launches, requests go to gabe@victoryformationventures.com.</p>
+        <p id="lo-note" style="font-size:12px; color:var(--dim); margin-top:14px;">Every request is read personally.</p>
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="eyebrow">Working notes (remove before launch)</div>
-        <div class="rule"></div>
-        <div class="notes">
-          <p><b>Name.</b> "Live Oak Reserve" leans on Austin's signature tree and the private-list idea. Alternatives if you want to test: Limestone Collective, Hill Country Reserve, Barton Creek Private, The Formation Collection.</p>
-          <p><b>What has to be true to launch.</b> Texas real estate licensing for whoever represents clients, a sponsoring broker or brokerage affiliation (Compass is the Eden Grove model; Austin options include Compass, Kuper Sotheby's, Moreland, Douglas Elliman), a photography and film partner, and an email platform for the Private Access list.</p>
-          <p><b>How the list would work.</b> The form above can post straight into a "VFV Private Access" Google Sheet the same way the dashboard forms do, so signups are captured from day one even before the brand goes public.</p>
-          <p><b>Access code.</b> Change it in this page's source (search for <code>ACCESS_CODE</code>). It is a courtesy gate to keep the concept out of search results, not a security measure.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer><div class="wrap">Live Oak Reserve is a working concept of Victory Formations Ventures LLC, Austin, Texas. Not yet offering brokerage services.</div></footer>
@@ -210,9 +208,16 @@
     }
     try { if (sessionStorage.getItem(KEY) === '1') { document.body.classList.remove('locked'); document.getElementById('gate').style.display = 'none'; } } catch (_) {}
     function joinList(e) {
-      e.preventDefault(); const f = e.target;
-      const body = encodeURIComponent('Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\nPhone: ' + f.phone.value + '\nType: ' + f.type.value + '\n\n' + f.notes.value);
-      location.href = 'mailto:gabe@victoryformationventures.com?subject=' + encodeURIComponent('[Live Oak Reserve] Private access request, ' + f.name.value) + '&body=' + body;
+      e.preventDefault(); const f = e.target; const note = document.getElementById('lo-note');
+      const btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending';
+      fetch('https://formsubmit.co/ajax/gabe@victoryformationventures.com', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ _subject: '[Live Oak Reserve] Private access request, ' + f.name.value, _template: 'table', _captcha: 'false',
+          name: f.name.value, email: f.email.value, phone: f.phone.value, type: f.type.value, notes: f.notes.value })
+      }).then(r => r.json()).then(d => {
+        if (d.success === 'true' || d.success === true) { f.reset(); note.textContent = 'Received. We will be in touch personally.'; btn.textContent = 'Sent'; }
+        else { throw new Error(); }
+      }).catch(() => { note.textContent = 'Something went wrong. Email gabe@victoryformationventures.com directly.'; btn.disabled = false; btn.textContent = 'Request access'; });
       return false;
     }
   </script>
