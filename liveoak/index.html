@@ -23,7 +23,7 @@
     /* gate */
     #gate { position:fixed; inset:0; z-index:50; display:grid; place-items:center; background:var(--bg); padding:24px; }
     #gate .box { width:min(440px,100%); text-align:center; }
-    #gate img { height:70px; filter:brightness(0) invert(1); opacity:.9; margin-bottom:22px; }
+    #gate img { height:150px; width:150px; border-radius:50%; margin-bottom:22px; }
     #gate h1 { font-size:22px; letter-spacing:.3em; text-transform:uppercase; }
     #gate p { color:var(--muted); font-size:13px; letter-spacing:.06em; margin:14px 0 26px; }
     #gate input { width:100%; padding:14px 16px; background:var(--panel); border:1px solid var(--rule); color:var(--text); font-family:var(--body); font-size:16px; letter-spacing:.3em; text-align:center; }
@@ -37,7 +37,7 @@
     header { border-bottom:1px solid var(--rule); }
     .nav { display:flex; align-items:center; justify-content:space-between; height:72px; }
     .brand { display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .brand img { height:36px; filter:brightness(0) invert(1); }
+    .brand img { height:40px; width:40px; border-radius:50%; }
     .brand span { font-family:var(--display); font-size:13px; letter-spacing:.3em; text-transform:uppercase; }
     .nav .tag { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--dim); }
     .hero { position:relative; min-height:78vh; display:grid; place-items:center; text-align:center; overflow:hidden; }
@@ -66,7 +66,7 @@
 <body class="locked">
   <div id="gate">
     <div class="box">
-      <img src="../assets/icon-arch-transparent.png" alt="" />
+      <img src="../assets/live-oak-emblem.webp" alt="Live Oak Reserve emblem" class="emblem" />
       <h1>Private Access</h1>
       <p>Private access by introduction. Enter your access code to continue.</p>
       <form onsubmit="return unlock(event)">
@@ -80,7 +80,7 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="./"><img src="../assets/icon-arch-transparent.png" alt="" /><span>Live Oak Reserve</span></a>
+      <a class="brand" href="./"><img src="../assets/live-oak-emblem-sm.webp" alt="" class="brand-emblem" /><span>Live Oak Reserve</span></a>
       <div class="tag">A Victory Formation Ventures brand</div>
     </div>
   </header>
