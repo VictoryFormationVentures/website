@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Luxury Neighborhoods in Austin and the Hill Country · Live Oak Reserve</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#151613" />
+  <meta name="description" content="The Austin and Texas Hill Country neighborhoods and developments Live Oak Reserve knows street by street." />
+  <link rel="icon" href="../assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/lo.css" />
+</head>
+<body class="locked" data-page="neighborhoods">
+  <div id="gate">
+    <div class="box">
+      <div class="display mark">Live Oak Reserve</div>
+      <div class="cap sub">Private access by introduction</div>
+      <form onsubmit="return loUnlock(event)">
+        <input id="code" type="password" autocomplete="off" placeholder="Access code" aria-label="Access code" />
+        <button type="submit" aria-label="Enter">&rarr;</button>
+      </form>
+      <div class="err" id="err"></div>
+      <a class="cap back" href="../">Victory Formation Ventures</a>
+    </div>
+  </div>
+
+  <header class="bar" id="bar">
+    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small>Brokerage</small></a>
+    <nav class="cap" aria-label="Main">
+      <div class="dd"><button type="button" aria-haspopup="true">Residential</button><div class="menu"><a href="properties.html">Properties</a><a href="sellers.html">Sellers</a><a href="buyers.html">Buyers</a><a href="neighborhoods.html">Neighborhoods</a><a href="marketing.html">Marketing</a><a href="past-transactions.html">Past Transactions</a></div></div>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="loDrawer(true)"><span></span><span></span></button>
+  </header>
+  <div class="drawer" id="drawer">
+    <button class="close" aria-label="Close" onclick="loDrawer(false)">&times;</button>
+    <a href="./" onclick="loDrawer(false)">Home</a>
+    <a href="properties.html" onclick="loDrawer(false)">Residential</a>
+    <div class="sub"><a href="properties.html" onclick="loDrawer(false)">Properties</a><a href="sellers.html" onclick="loDrawer(false)">Sellers</a><a href="buyers.html" onclick="loDrawer(false)">Buyers</a><a href="neighborhoods.html" onclick="loDrawer(false)">Neighborhoods</a><a href="marketing.html" onclick="loDrawer(false)">Marketing</a><a href="past-transactions.html" onclick="loDrawer(false)">Past Transactions</a></div>
+    <a href="team.html" onclick="loDrawer(false)">Team</a>
+    <a href="contact.html" onclick="loDrawer(false)">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="banner"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1530089711124-9ca31fb9e863?w=2400&q=80')"></div>
+      <div class="inner reveal"><div class="cap eyebrow">Residential</div><h1 class="display">Where We Work</h1>
+      <p>From oak-shaded streets near downtown to waterfront on Lake Austin and Lake Travis to ranch land in the hills, the Texas Hill Country covers a lot of ground. Here is our guide to where we work across Travis, Williamson and Hays counties.</p></div></section>
+    <section class="hoods"><p class="cap hoods__h">Luxury Areas</p><div class="hoods__grid"><a class="hood reveal" href="neighborhood.html?n=westlake"><img src="https://images.unsplash.com/photo-1618880542228-d188d60a1c0b?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Westlake<small>West Lake Hills and surrounding 78746 / 78733, Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=tarrytown"><img src="https://images.unsplash.com/photo-1747258818911-dfde27ecabba?w=1600&q=80" alt="" loading="lazy" /><span class="hood__name">Tarrytown<small>Austin (78703), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=rollingwood"><img src="https://images.unsplash.com/photo-1604705053169-4d4e622f1353?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Rollingwood<small>City of Rollingwood (78746), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=barton-creek"><img src="https://images.unsplash.com/photo-1604707134701-6712b5e30e12?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Barton Creek<small>Southwest Austin (78735 / 78733), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=lake-austin"><img src="media/penny.jpg" alt="" loading="lazy" /><span class="hood__name">Lake Austin<small>Lake Austin shoreline, Austin and unincorporated Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=lakeway-lake-travis"><img src="media/travis.jpg" alt="" loading="lazy" /><span class="hood__name">Lakeway and Lake Travis<small>City of Lakeway (78734 / 78738), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=dripping-springs"><img src="https://images.unsplash.com/photo-1607451498705-5f265aeb83a4?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Dripping Springs<small>City of Dripping Springs (78620), Hays County</small></span></a><a class="hood reveal" href="neighborhood.html?n=georgetown"><img src="https://images.unsplash.com/photo-1627515865509-f821bebb7524?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Georgetown<small>City of Georgetown, Williamson County</small></span></a></div></section>
+    <section class="hoods"><p class="cap hoods__h">Luxury Developments</p><div class="hoods__grid"><a class="hood reveal" href="neighborhood.html?n=spanish-oaks"><img src="https://images.unsplash.com/photo-1568041968442-5db8b9b41156?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Spanish Oaks<small>Bee Cave area off Highway 71 (Austin 78738 address), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=rough-hollow"><img src="https://images.unsplash.com/photo-1629767175732-9e21f04429aa?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Rough Hollow<small>City of Lakeway (78738 / 78734), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=the-hills"><img src="media/hilllake.jpg" alt="" loading="lazy" /><span class="hood__name">The Hills<small>Village of The Hills, next to Lakeway (78738), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=costa-bella"><img src="https://images.unsplash.com/photo-1621483053395-462ce1337668?w=2000&q=80" alt="" loading="lazy" /><span class="hood__name">Costa Bella<small>Lake Travis, off RM 620 at Oak Grove Blvd (78734), Travis County</small></span></a><a class="hood reveal" href="neighborhood.html?n=caliterra"><img src="media/oaksunset.jpg" alt="" loading="lazy" /><span class="hood__name">Caliterra<small>Dripping Springs (78620), Hays County</small></span></a></div></section>
+    <section class="stats"><div class="wrap"><div class="cap eyebrow reveal">Where the market is</div><div class="stats__row"><div class="reveal"><div class="stat__n">$2,287,225</div><div class="cap stat__k">Westlake median asking</div><p>The highest of any ZIP we cover</p></div><div class="reveal"><div class="stat__n">$681</div><div class="cap stat__k">Per square foot, Tarrytown</div><p>The most expensive foot of ground on our map</p></div><div class="reveal"><div class="stat__n">114</div><div class="cap stat__k">Days on market, Spicewood</div><p>The slowest market we cover, and the most room to negotiate</p></div></div></div></section>
+
+    <section class="ztable"><div class="wrap">
+      <p class="reveal z-intro">The ZIP codes we work in, ranked by what sellers are asking across active listings. The <i>tail</i> column is the average asking price divided by the median, which shows how far the top of each market stretches above the middle.</p>
+      <div class="z-scroll reveal"><table><thead><tr><th>Area</th><th>Median asking</th><th>Average asking</th><th>Tail</th><th>$/sq ft</th><th>Days</th></tr></thead><tbody><tr><td><span class="z-area">Westlake &amp; Rollingwood</span><small>78746</small></td><td>$2,287,225</td><td>$3,426,669</td><td>1.5&times;</td><td>$660</td><td>80</td></tr><tr><td><span class="z-area">Lake Austin &amp; Davenport</span><small>78733</small></td><td>$1,472,450</td><td>$1,936,826</td><td>1.3&times;</td><td>$474</td><td>72</td></tr><tr><td><span class="z-area">Tarrytown &amp; Old West Austin</span><small>78703</small></td><td>$1,325,495</td><td>$1,810,869</td><td>1.4&times;</td><td>$681</td><td>70</td></tr><tr><td><span class="z-area">Northwest Hills &amp; Mount Bonnell</span><small>78731</small></td><td>$1,137,500</td><td>$1,399,491</td><td>1.2&times;</td><td>$412</td><td>65</td></tr><tr><td><span class="z-area">Bee Cave, Spanish Oaks &amp; The Hills</span><small>78738</small></td><td>$1,019,250</td><td>$1,496,222</td><td>1.5&times;</td><td>$302</td><td>86</td></tr><tr><td><span class="z-area">Spicewood &amp; Lake Travis west</span><small>78669</small></td><td>$990,000</td><td>$1,596,093</td><td>1.6&times;</td><td>$370</td><td>114</td></tr><tr><td><span class="z-area">River Place &amp; Lake Austin north</span><small>78730</small></td><td>$916,750</td><td>$2,220,426</td><td>2.4&times;</td><td>$341</td><td>78</td></tr><tr><td><span class="z-area">Steiner Ranch</span><small>78732</small></td><td>$850,000</td><td>$1,741,865</td><td>2.0&times;</td><td>$285</td><td>74</td></tr><tr><td><span class="z-area">Dripping Springs</span><small>78620</small></td><td>$831,000</td><td>$1,278,693</td><td>1.5&times;</td><td>$300</td><td>92</td></tr><tr><td><span class="z-area">Barton Creek</span><small>78735</small></td><td>$783,000</td><td>$1,673,523</td><td>2.1&times;</td><td>$414</td><td>94</td></tr><tr><td><span class="z-area">Lakeway &amp; Hurst Creek</span><small>78734</small></td><td>$778,450</td><td>$1,150,695</td><td>1.5&times;</td><td>$312</td><td>101</td></tr></tbody></table></div>
+      <p class="z-src reveal">Asking prices across active listings, not closed sales. Closed figures live in Unlock MLS, and we pull them for any specific address on request. Days is median days on market. Source: Realtor.com&reg; Research, September 2026. Refreshed monthly.</p>
+    </div></section>
+    <section class="collection" id="collection">
+      <div class="bg" role="img" aria-label="Aerial view of Hill Country lake and hills"></div>
+      <div class="inner"><div class="reveal">
+        <h2 class="display js-cname">The Limestone Collection</h2>
+        <p>Off-market homes, early looks at new construction and our notes on the Hill Country market. For members only, and always first.</p>
+        <form class="js-collection">
+          <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address" />
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" />
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <div class="fine js-note">By signing up you agree to our <a href="terms.html">Terms and Conditions</a>. Every request is reviewed personally.</div>
+      </div></div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="brand display">Live Oak Reserve</div>
+    <div class="cols3">
+      <div><h4 class="cap">Sitemap</h4><ul><li><a href="./">Home</a></li><li><a href="properties.html">Residential</a></li><li><a href="sellers.html">Sellers</a></li><li><a href="buyers.html">Buyers</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      <div><h4 class="cap">Contact</h4><ul><li><a href="tel:+17376005101">(737) 600-5101</a></li><li><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></li><li><a href="https://instagram.com/liveoakreservetx" target="_blank" rel="noopener">@liveoakreservetx</a></li></ul></div>
+      <div><h4 class="cap">Address</h4><ul><li>3004 Webberville Road #2</li><li>Austin, TX 78702</li></ul></div>
+    </div>
+    <div class="legal">
+      <div class="bk">BROKERAGE</div>
+      <p>Live Oak Reserve is a team at <b>Brokerage</b>, a project of Victory Formation Ventures LLC<br>
+      Brokerage Address, Austin, Texas &middot; Firm license 000000<br>
+      Office (000) 000-0000 &middot; Equal Housing Opportunity</p>
+    </div>
+    <div class="extra">
+      <span><a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener">Texas Real Estate Commission Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
+      <span>&copy; <span class="js-yr"></span> Victory Formation Ventures LLC &middot; <a href="https://dashboard.victoryformationventures.com/">Team login</a></span>
+    </div>
+  </footer>
+  <script src="assets/lo.js"></script>
+
+</body>
+</html>

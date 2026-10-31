@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Contact · Live Oak Reserve, Austin</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#151613" />
+  <meta name="description" content="Contact Live Oak Reserve." />
+  <link rel="icon" href="../assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/lo.css" />
+</head>
+<body class="locked" data-page="contact">
+  <div id="gate">
+    <div class="box">
+      <div class="display mark">Live Oak Reserve</div>
+      <div class="cap sub">Private access by introduction</div>
+      <form onsubmit="return loUnlock(event)">
+        <input id="code" type="password" autocomplete="off" placeholder="Access code" aria-label="Access code" />
+        <button type="submit" aria-label="Enter">&rarr;</button>
+      </form>
+      <div class="err" id="err"></div>
+      <a class="cap back" href="../">Victory Formation Ventures</a>
+    </div>
+  </div>
+
+  <header class="bar" id="bar">
+    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small>Brokerage</small></a>
+    <nav class="cap" aria-label="Main">
+      <div class="dd"><button type="button" aria-haspopup="true">Residential</button><div class="menu"><a href="properties.html">Properties</a><a href="sellers.html">Sellers</a><a href="buyers.html">Buyers</a><a href="neighborhoods.html">Neighborhoods</a><a href="marketing.html">Marketing</a><a href="past-transactions.html">Past Transactions</a></div></div>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="loDrawer(true)"><span></span><span></span></button>
+  </header>
+  <div class="drawer" id="drawer">
+    <button class="close" aria-label="Close" onclick="loDrawer(false)">&times;</button>
+    <a href="./" onclick="loDrawer(false)">Home</a>
+    <a href="properties.html" onclick="loDrawer(false)">Residential</a>
+    <div class="sub"><a href="properties.html" onclick="loDrawer(false)">Properties</a><a href="sellers.html" onclick="loDrawer(false)">Sellers</a><a href="buyers.html" onclick="loDrawer(false)">Buyers</a><a href="neighborhoods.html" onclick="loDrawer(false)">Neighborhoods</a><a href="marketing.html" onclick="loDrawer(false)">Marketing</a><a href="past-transactions.html" onclick="loDrawer(false)">Past Transactions</a></div>
+    <a href="team.html" onclick="loDrawer(false)">Team</a>
+    <a href="contact.html" onclick="loDrawer(false)">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="thero img" style="min-height:78vh"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1663596333422-29d6fb1620c6?w=2400&q=80')"></div><div class="reveal">
+      <div class="cap eyebrow">Contact</div>
+      <h1 class="display">Let's start<br>with a conversation</h1>
+      <p>Buying, selling, building or just curious what your home is worth, send us a note. We will call you back ourselves, usually the same day.</p></div></section>
+
+    <section class="block"><div class="wrap c-body">
+      <form class="form js-lead reveal" data-source="contact">
+        <div><label class="cap" for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name" /></div>
+        <div><label class="cap" for="c-email">Email</label><input id="c-email" name="email" type="email" required autocomplete="email" /></div>
+        <div><label class="cap" for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" /></div>
+        <div><label class="cap" for="c-topic">How can we help?</label>
+          <select id="c-topic" name="topic"><option>A property you represent</option><option>A property I have seen elsewhere</option><option>Private showing</option><option>The Limestone Collection</option><option>Selling my home</option><option>Building a custom home</option><option>Land or a lot</option><option>Something else</option></select></div>
+        <div class="full"><label class="cap" for="c-msg">Message</label><textarea id="c-msg" name="message" placeholder="Neighborhoods, budget, timing, the home you have in mind"></textarea></div>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" />
+        <label class="full consent"><input type="checkbox" name="sms_consent" /> <span>Yes, Live Oak Reserve may text me about my inquiry at the number above. Message and data rates may apply. Reply STOP to opt out. Consent is not a condition of any purchase. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.</span></label>
+        <div class="full row-end"><button class="btn" type="submit">Send</button><span class="fine js-note" style="margin:0">We reply personally, usually the same day.</span></div>
+      </form>
+      <aside class="c-side reveal">
+        <h3 class="cap">Call or text</h3><p><a href="tel:+17376005101">(737) 600-5101</a></p>
+        <h3 class="cap">Email</h3><p><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></p>
+        <h3 class="cap">Office</h3><p>3004 Webberville Road #2<br>Austin, TX 78702</p>
+        <h3 class="cap">Instagram</h3><p><a href="https://instagram.com/liveoakreservetx" target="_blank" rel="noopener">@liveoakreservetx</a></p>
+      </aside>
+    </div></section>
+
+    <section class="block"><div class="narrow faq">
+      <div class="cap reveal" style="color:var(--sand);margin-bottom:24px">Questions</div>
+      <details><summary>What is Live Oak Reserve?</summary><p>Live Oak Reserve is the luxury real estate team of Victory Formation Ventures, a real estate firm working across land acquisition, development, custom home representation and sales in the Texas Hill Country. The team is led by Gabe Jeudy-Lally with partner Ryan Stonehouse.</p></details>
+      <details><summary>What areas do you cover?</summary><p>The Texas Hill Country: Travis, Williamson and Hays counties. That includes central Austin neighborhoods like Tarrytown, the west side from Westlake to Barton Creek, the Lake Austin and Lake Travis corridors, and the Hill Country towns beyond them such as Dripping Springs and Georgetown.</p></details>
+      <details><summary>What kind of properties do you represent?</summary><p>Estate homes, waterfront and acreage properties, and new construction, including homes we helped bring from raw land to finished house. We represent sellers and buyers, and we work with builders and landowners every week.</p></details>
+      <details><summary>What is The Limestone Collection?</summary><p>Our private list. Members see private exclusives, market notes and opportunities before they reach the open market. Requests are reviewed personally, and you can leave the list at any time.</p></details>
+      <details><summary>What makes your marketing different?</summary><p>As a production: film, architectural photography, drone, a website of its own and targeted reach, launched in three phases, private, then coming soon, then active. See the <a href="marketing.html" style="border-bottom:1px solid var(--line)">marketing page</a> for the full approach.</p></details>
+      <details><summary>Do you work with builders and developers?</summary><p>Yes. We source land that fits each builder's criteria, keep every buy box private, and market and sell the finished homes. Builders never compete against each other through us.</p></details>
+      <details><summary>Can you help me build a custom home?</summary><p>Yes. We can help you find the lot, assemble the right builder and architect, and represent your interests through the build, from groundbreaking to housewarming.</p></details>
+      <details><summary>How do I reach you?</summary><p>Call or text (737) 600-5101, email gabe@victoryformationventures.com, or use the form above. We reply personally.</p></details>
+    </div></section>
+  </main>
+
+  <footer class="foot">
+    <div class="brand display">Live Oak Reserve</div>
+    <div class="cols3">
+      <div><h4 class="cap">Sitemap</h4><ul><li><a href="./">Home</a></li><li><a href="properties.html">Residential</a></li><li><a href="sellers.html">Sellers</a></li><li><a href="buyers.html">Buyers</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      <div><h4 class="cap">Contact</h4><ul><li><a href="tel:+17376005101">(737) 600-5101</a></li><li><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></li><li><a href="https://instagram.com/liveoakreservetx" target="_blank" rel="noopener">@liveoakreservetx</a></li></ul></div>
+      <div><h4 class="cap">Address</h4><ul><li>3004 Webberville Road #2</li><li>Austin, TX 78702</li></ul></div>
+    </div>
+    <div class="legal">
+      <div class="bk">BROKERAGE</div>
+      <p>Live Oak Reserve is a team at <b>Brokerage</b>, a project of Victory Formation Ventures LLC<br>
+      Brokerage Address, Austin, Texas &middot; Firm license 000000<br>
+      Office (000) 000-0000 &middot; Equal Housing Opportunity</p>
+    </div>
+    <div class="extra">
+      <span><a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener">Texas Real Estate Commission Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
+      <span>&copy; <span class="js-yr"></span> Victory Formation Ventures LLC &middot; <a href="https://dashboard.victoryformationventures.com/">Team login</a></span>
+    </div>
+  </footer>
+  <script src="assets/lo.js"></script>
+
+</body>
+</html>

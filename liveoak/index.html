@@ -6,211 +6,19 @@
   <title>Live Oak Reserve · Austin and the Texas Hill Country</title>
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#151613" />
-  <meta name="description" content="Live Oak Reserve, a private real estate team of Victory Formation Ventures. Estate homes and new construction across the Texas Hill Country: Travis, Williamson and Hays counties." />
+  <meta name="description" content="Live Oak Reserve, a luxury real estate team of Victory Formation Ventures. Estate homes and new construction across the Texas Hill Country." />
   <link rel="icon" href="../assets/icon-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --ink:#151613; --ink-2:#1C1E19; --ink-3:#23261F;
-      --stone:#F3EBDD; --sand:#D8CAB2; --putty:#A9A193; --oak:#4E5A3E; --oak-hi:#6E7D58;
-      --t1:#F3EBDD; --t2:rgba(243,235,221,.74); --t3:rgba(243,235,221,.48); --line:rgba(243,235,221,.14);
-      --display:'Aboreto', Georgia, serif; --ui:'Montserrat', system-ui, -apple-system, sans-serif;
-      --gutter:clamp(1.25rem,4vw,3.25rem); --rise:cubic-bezier(.22,.61,.36,1);
-    }
-    *,*::before,*::after { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--ink); color:var(--t1); font-family:var(--ui); font-weight:300; line-height:1.65; -webkit-font-smoothing:antialiased; }
-    a { color:inherit; text-decoration:none; }
-    img { display:block; max-width:100%; }
-    .cap { font-size:10.5px; letter-spacing:.26em; text-transform:uppercase; }
-    .display { font-family:var(--display); font-weight:400; letter-spacing:.32em; text-transform:uppercase; }
-
-    /* ---------- gate ---------- */
-    #gate { position:fixed; inset:0; z-index:100; display:grid; place-items:center; background:var(--ink); padding:24px; }
-    #gate::before { content:""; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1629767175742-768f60bf924e?w=2000&q=70') center/cover; opacity:.18; }
-    #gate .box { position:relative; width:min(420px,100%); text-align:center; }
-    #gate .mark { font-size:clamp(20px,3.4vw,28px); }
-    #gate .sub { margin:14px 0 40px; color:var(--t3); }
-    #gate form { display:flex; border-bottom:1px solid var(--t3); }
-    #gate input { flex:1; background:transparent; border:0; color:var(--t1); font:300 15px var(--ui); letter-spacing:.3em; padding:14px 2px; text-transform:uppercase; }
-    #gate input:focus { outline:none; }
-    #gate input::placeholder { color:var(--t3); }
-    #gate button { background:transparent; border:0; color:var(--t1); cursor:pointer; padding:0 4px; }
-    #gate .err { color:#E3A08F; font-size:12px; height:18px; margin-top:12px; }
-    #gate .back { display:inline-block; margin-top:44px; color:var(--t3); }
-    body.locked { overflow:hidden; }
-
-    /* ---------- header ---------- */
-    .bar { position:fixed; top:0; left:0; right:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:clamp(1.3rem,2.4vw,2rem) var(--gutter); transition:background .5s, padding .5s; }
-    .bar.solid { background:rgba(21,22,19,.92); backdrop-filter:blur(10px); padding-top:1rem; padding-bottom:1rem; }
-    .bar .mark { display:flex; align-items:center; gap:16px; font-size:14px; }
-    .bar .mark .divider { width:1px; height:18px; background:var(--t3); }
-    .bar .mark small { font-family:var(--ui); font-size:9.5px; letter-spacing:.28em; color:var(--t2); }
-    .bar nav { display:flex; gap:clamp(18px,2.4vw,34px); }
-    .bar nav a { color:var(--t2); transition:color .3s; }
-    .bar nav a:hover { color:var(--t1); }
-    .menu-btn { display:none; background:none; border:0; color:var(--t1); cursor:pointer; padding:6px; }
-    .menu-btn span { display:block; width:24px; height:1px; background:currentColor; margin:6px 0; }
-    .drawer { position:fixed; inset:0; z-index:60; background:var(--ink); display:flex; flex-direction:column; justify-content:center; gap:26px; padding:var(--gutter); transform:translateY(-100%); transition:transform .6s var(--rise); }
-    .drawer.open { transform:none; }
-    .drawer a { font-family:var(--display); font-size:22px; letter-spacing:.24em; text-transform:uppercase; }
-    .drawer .close { position:absolute; top:24px; right:var(--gutter); background:none; border:0; color:var(--t1); font-size:28px; cursor:pointer; }
-
-    /* ---------- hero ---------- */
-    .hero { position:relative; height:100svh; min-height:560px; overflow:hidden; display:grid; place-items:center; text-align:center; }
-    .hero .bg { position:absolute; inset:-4%; background:url('https://images.unsplash.com/photo-1769913995907-e1cc7ff527a1?w=2400&q=80') center 55%/cover; animation:drift 32s ease-in-out infinite alternate; }
-    .hero::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(21,22,19,.55) 0%, rgba(21,22,19,.18) 38%, rgba(21,22,19,.35) 70%, var(--ink) 100%); }
-    @keyframes drift { from { transform:scale(1.04) translate3d(-1%,0,0); } to { transform:scale(1.12) translate3d(1.5%,-1%,0); } }
-    .hero .inner { position:relative; z-index:2; padding:60px var(--gutter); }
-    .hero .inner::before { content:""; position:absolute; inset:-30% -20%; z-index:-1; background:radial-gradient(closest-side, rgba(21,22,19,.55), rgba(21,22,19,0)); }
-    .hero h1 { font-size:clamp(28px,5.4vw,64px); margin:0; letter-spacing:.34em; }
-    .hero .team { margin-top:18px; color:var(--t2); }
-    .hero .team b { font-weight:400; color:var(--t1); }
-    .scroll { position:absolute; bottom:34px; left:50%; transform:translateX(-50%); z-index:2; color:var(--t2); display:flex; flex-direction:column; align-items:center; gap:12px; }
-    .scroll i { width:1px; height:44px; background:linear-gradient(var(--t2),transparent); animation:drip 2.4s ease-in-out infinite; }
-    @keyframes drip { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
-
-    /* ---------- tiles ---------- */
-    .tiles { padding:clamp(70px,9vw,120px) var(--gutter) clamp(80px,10vw,140px); }
-    .emblem { width:86px; margin:0 auto clamp(46px,6vw,70px); opacity:.92; filter:grayscale(.2) brightness(.95); }
-    .tile-row { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,18px); max-width:1320px; margin:0 auto; }
-    .tile { position:relative; aspect-ratio:4/5; overflow:hidden; }
-    .tile img { width:100%; height:100%; object-fit:cover; transition:transform 1.4s var(--rise), filter 1s; filter:brightness(.82) saturate(.92); }
-    .tile:hover img { transform:scale(1.05); filter:brightness(.68) saturate(.9); }
-    .tile::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(21,22,19,.7)); }
-    .tile .label { position:absolute; left:clamp(18px,2vw,28px); bottom:clamp(18px,2vw,28px); z-index:2; }
-    .tile .label span { display:block; margin-top:8px; height:1px; width:0; background:var(--t1); transition:width .7s var(--rise); }
-    .tile:hover .label span { width:42px; }
-
-    /* ---------- statement ---------- */
-    .statement { min-height:78vh; display:grid; place-items:center; text-align:center; padding:90px var(--gutter); }
-    .statement .eyebrow { color:var(--t3); margin-bottom:34px; }
-    .statement p.q { font-size:clamp(19px,2.2vw,27px); line-height:1.75; max-width:880px; margin:0 auto; color:var(--t1); font-weight:300; }
-    .statement .who { margin-top:30px; color:var(--t3); }
-    .statement .dots { margin-top:52px; display:flex; gap:10px; justify-content:center; }
-    .statement .dots button { width:28px; height:1px; border:0; background:var(--t3); cursor:pointer; padding:0; transition:background .3s; }
-    .statement .dots button.on { background:var(--t1); }
-    .rot { transition:opacity .6s; }
-
-    /* ---------- sections ---------- */
-    section.block { padding:clamp(90px,11vw,150px) var(--gutter); border-top:1px solid var(--line); }
-    .wrap { max-width:1180px; margin:0 auto; }
-    .head { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(30px,6vw,90px); align-items:start; }
-    .head h2 { font-size:clamp(19px,2.3vw,29px); line-height:1.5; letter-spacing:.2em; margin:16px 0 0; }
-    .head .eyebrow { color:var(--sand); }
-    .head p { color:var(--t2); font-size:clamp(15px,1.3vw,17px); margin:0 0 18px; }
-    .rule { width:46px; height:1px; background:var(--oak-hi); margin-top:28px; }
-    .points { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); margin-top:clamp(50px,6vw,80px); border:1px solid var(--line); }
-    .points > div { background:var(--ink); padding:clamp(26px,3vw,40px); }
-    .points h3 { font-family:var(--display); font-weight:400; font-size:14px; letter-spacing:.22em; text-transform:uppercase; margin:0 0 14px; }
-    .points p { margin:0; color:var(--t2); font-size:14.5px; }
-    .points .n { color:var(--oak-hi); margin-bottom:22px; }
-
-    .split { display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,70px); margin-top:clamp(50px,6vw,80px); }
-    .split figure { margin:0; aspect-ratio:4/5; overflow:hidden; }
-    .split figure img { width:100%; height:100%; object-fit:cover; filter:brightness(.85); }
-    .split dl { margin:0; }
-    .split dt { font-family:var(--display); font-size:13.5px; letter-spacing:.2em; text-transform:uppercase; margin-top:30px; }
-    .split dt:first-child { margin-top:0; }
-    .split dd { margin:10px 0 0; color:var(--t2); font-size:14.5px; }
-    .split .col-title { color:var(--sand); margin-bottom:28px; padding-bottom:16px; border-bottom:1px solid var(--line); }
-
-    section.oakband { background:var(--oak); border-top:0; }
-    section.oakband .head .eyebrow { color:var(--stone); opacity:.75; }
-    section.oakband .head p { color:rgba(243,235,221,.86); }
-    section.oakband .rule { background:var(--stone); opacity:.55; }
-    section.oakband .points { background:rgba(243,235,221,.2); border-color:rgba(243,235,221,.2); }
-    section.oakband .points > div { background:var(--oak); }
-    section.oakband .points p { color:rgba(243,235,221,.86); }
-    section.oakband .points .n { color:var(--stone); opacity:.7; }
-    section.oakband + section { border-top:0; }
-
-    /* ---------- regions ---------- */
-    .regions { display:grid; grid-template-columns:2fr 1fr 1fr; gap:clamp(10px,1.4vw,18px); margin-top:clamp(50px,6vw,80px); }
-    .region { position:relative; overflow:hidden; min-height:clamp(320px,38vw,520px); }
-    .region img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.7); transition:transform 1.4s var(--rise); }
-    .region:hover img { transform:scale(1.04); }
-    .region .txt { position:absolute; left:24px; right:24px; bottom:22px; z-index:2; }
-    .region .txt .tag { color:var(--sand); margin-bottom:10px; }
-    .region .txt h3 { font-family:var(--display); font-weight:400; font-size:clamp(15px,1.5vw,19px); letter-spacing:.22em; text-transform:uppercase; margin:0; }
-    .region .txt p { margin:8px 0 0; color:var(--t2); font-size:13px; }
-    .region::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 45%,rgba(21,22,19,.8)); }
-    .counties { margin-top:28px; color:var(--t3); text-align:center; }
-
-    /* ---------- collection ---------- */
-    .collection { position:relative; padding:clamp(110px,13vw,180px) var(--gutter); overflow:hidden; background:var(--ink-2); }
-    .collection .bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1629767175742-768f60bf924e?w=2400&q=80') center 40%/cover; filter:saturate(.75) brightness(.85); }
-    .collection::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(21,22,19,.94) 0%, rgba(21,22,19,.72) 46%, rgba(21,22,19,.2) 100%); }
-    .collection .inner { position:relative; z-index:2; max-width:1180px; margin:0 auto; }
-    .collection .inner > div { max-width:520px; }
-    .collection h2 { font-size:clamp(18px,2.2vw,26px); margin:0; }
-    .collection p { color:var(--t2); font-size:15px; margin:22px 0 0; }
-    .collection form { display:flex; gap:14px; margin-top:42px; align-items:stretch; }
-    .collection input { flex:1; background:transparent; border:0; border-bottom:1px solid var(--t3); color:var(--t1); font:300 15px var(--ui); padding:14px 2px; }
-    .collection input:focus { outline:none; border-color:var(--t1); }
-    .collection input::placeholder { color:var(--t3); }
-    .btn { background:transparent; border:1px solid var(--t2); color:var(--t1); font:400 10.5px var(--ui); letter-spacing:.26em; text-transform:uppercase; padding:15px 30px; cursor:pointer; transition:background .35s, color .35s, border-color .35s; white-space:nowrap; }
-    .btn:hover { background:var(--stone); color:var(--ink); border-color:var(--stone); }
-    .btn:disabled { opacity:.5; cursor:default; }
-    .fine { font-size:12px; color:var(--t3); margin-top:18px; }
-    .hp { position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
-
-    /* ---------- consult ---------- */
-    .consult form { display:grid; grid-template-columns:1fr 1fr; gap:28px 34px; margin-top:clamp(50px,6vw,70px); }
-    .consult .full { grid-column:1/-1; }
-    .consult label { display:block; color:var(--t3); margin-bottom:6px; }
-    .consult input, .consult select, .consult textarea { width:100%; background:transparent; border:0; border-bottom:1px solid var(--line); color:var(--t1); font:300 15px var(--ui); padding:10px 2px; border-radius:0; }
-    .consult select option { background:var(--ink); }
-    .consult textarea { resize:vertical; min-height:90px; }
-    .consult input:focus, .consult select:focus, .consult textarea:focus { outline:none; border-color:var(--sand); }
-    .consult .row-end { display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
-
-    /* ---------- footer ---------- */
-    footer { padding:clamp(70px,8vw,110px) var(--gutter) 40px; border-top:1px solid var(--line); }
-    footer .top { display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; max-width:1180px; margin:0 auto; }
-    footer .mark { font-size:15px; }
-    footer .mark small { display:block; margin-top:12px; font-family:var(--ui); font-size:9.5px; letter-spacing:.28em; color:var(--t3); }
-    footer h4 { margin:0 0 18px; color:var(--t3); font-weight:400; }
-    footer ul { list-style:none; margin:0; padding:0; display:grid; gap:10px; font-size:13.5px; color:var(--t2); }
-    footer ul a:hover { color:var(--t1); }
-    footer .legal { max-width:1180px; margin:60px auto 0; padding-top:28px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; font-size:11.5px; color:var(--t3); line-height:1.8; }
-    footer .legal p { margin:0; max-width:760px; }
-
-    /* ---------- reveal ---------- */
-    .reveal { opacity:0; transform:translateY(26px); transition:opacity 1.1s var(--rise), transform 1.1s var(--rise); }
-    .reveal.in { opacity:1; transform:none; }
-    .tile-row .reveal:nth-child(2), .points .reveal:nth-child(2), .regions .reveal:nth-child(2) { transition-delay:.12s; }
-    .tile-row .reveal:nth-child(3), .points .reveal:nth-child(3), .regions .reveal:nth-child(3) { transition-delay:.24s; }
-    @media (prefers-reduced-motion:reduce) { .reveal { opacity:1; transform:none; } .hero .bg { animation:none; } }
-
-    @media (max-width:980px) {
-      .bar nav { display:none; } .menu-btn { display:block; }
-      .head, .split { grid-template-columns:1fr; }
-      .points { grid-template-columns:1fr; }
-      .regions { grid-template-columns:1fr 1fr; } .regions .region:first-child { grid-column:1/-1; }
-      footer .top { grid-template-columns:1fr 1fr; }
-    }
-    @media (max-width:640px) {
-      .bar .mark small, .bar .mark .divider { display:none; }
-      .tile-row { grid-template-columns:1fr; } .tile { aspect-ratio:5/4; }
-      .regions { grid-template-columns:1fr; }
-      .collection::before { background:linear-gradient(180deg, rgba(21,22,19,.9), rgba(21,22,19,.75)); }
-      .collection form { flex-direction:column; }
-      .consult form { grid-template-columns:1fr; }
-      footer .top { grid-template-columns:1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/lo.css" />
 </head>
-<body class="locked">
-
-  <!-- Private access gate (stays until Texas licensing is active) -->
+<body class="locked" data-page="home">
   <div id="gate">
     <div class="box">
       <div class="display mark">Live Oak Reserve</div>
       <div class="cap sub">Private access by introduction</div>
-      <form onsubmit="return unlock(event)">
+      <form onsubmit="return loUnlock(event)">
         <input id="code" type="password" autocomplete="off" placeholder="Access code" aria-label="Access code" />
         <button type="submit" aria-label="Enter">&rarr;</button>
       </form>
@@ -220,278 +28,97 @@
   </div>
 
   <header class="bar" id="bar">
-    <a class="mark display" href="#top">Live Oak Reserve<span class="divider"></span><small>Victory Formation Ventures</small></a>
-    <nav class="cap">
-      <a href="#standard">The Standard</a>
-      <a href="#marketing">Marketing</a>
-      <a href="#regions">Neighborhoods</a>
-      <a href="#collection" class="js-cname">The Collection</a>
-      <a href="#consult">Contact</a>
+    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small>Brokerage</small></a>
+    <nav class="cap" aria-label="Main">
+      <div class="dd"><button type="button" aria-haspopup="true">Residential</button><div class="menu"><a href="properties.html">Properties</a><a href="sellers.html">Sellers</a><a href="buyers.html">Buyers</a><a href="neighborhoods.html">Neighborhoods</a><a href="marketing.html">Marketing</a><a href="past-transactions.html">Past Transactions</a></div></div>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <button class="menu-btn" aria-label="Menu" onclick="drawer(true)"><span></span><span></span></button>
+    <button class="menu-btn" aria-label="Menu" onclick="loDrawer(true)"><span></span><span></span></button>
   </header>
   <div class="drawer" id="drawer">
-    <button class="close" aria-label="Close" onclick="drawer(false)">&times;</button>
-    <a href="#standard" onclick="drawer(false)">The Standard</a>
-    <a href="#marketing" onclick="drawer(false)">Marketing</a>
-    <a href="#regions" onclick="drawer(false)">Neighborhoods</a>
-    <a href="#collection" onclick="drawer(false)" class="js-cname">The Collection</a>
-    <a href="#consult" onclick="drawer(false)">Contact</a>
+    <button class="close" aria-label="Close" onclick="loDrawer(false)">&times;</button>
+    <a href="./" onclick="loDrawer(false)">Home</a>
+    <a href="properties.html" onclick="loDrawer(false)">Residential</a>
+    <div class="sub"><a href="properties.html" onclick="loDrawer(false)">Properties</a><a href="sellers.html" onclick="loDrawer(false)">Sellers</a><a href="buyers.html" onclick="loDrawer(false)">Buyers</a><a href="neighborhoods.html" onclick="loDrawer(false)">Neighborhoods</a><a href="marketing.html" onclick="loDrawer(false)">Marketing</a><a href="past-transactions.html" onclick="loDrawer(false)">Past Transactions</a></div>
+    <a href="team.html" onclick="loDrawer(false)">Team</a>
+    <a href="contact.html" onclick="loDrawer(false)">Contact</a>
   </div>
 
   <main id="top">
     <section class="hero">
-      <div class="bg" role="img" aria-label="Hill Country hills above Lake Travis at golden hour"></div>
+      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1769913995907-e1cc7ff527a1?w=2400&q=80')" role="img" aria-label="Hill Country hills above Lake Travis at golden hour"></div>
       <div class="inner">
         <h1 class="display">Live Oak Reserve</h1>
-        <div class="cap team">A <b>Victory Formation Ventures</b> team &nbsp;·&nbsp; Texas Hill Country</div>
+        <div class="cap team">A team at <b>Brokerage</b> &nbsp;·&nbsp; Texas Hill Country</div>
       </div>
-      <a class="cap scroll" href="#tiles">Scroll<i></i></a>
+      <a class="cap scroll" href="#excellence">Scroll<i></i></a>
     </section>
 
-    <section class="tiles" id="tiles">
+    <section class="tiles" id="excellence">
       <img class="emblem reveal" src="media/emblem.png" alt="Live Oak Reserve carved stone emblem" />
       <div class="tile-row">
-        <a class="tile reveal" href="#standard"><img src="https://images.unsplash.com/photo-1603039531759-1a1bbe4f9f94?w=1100&q=80" alt="Stone fireplace in a warm living room" loading="lazy" /><div class="label cap">The Standard<span></span></div></a>
-        <a class="tile reveal" href="#marketing"><img src="media/twilight.jpg" alt="Modern Hill Country home at twilight" loading="lazy" /><div class="label cap">Luxury Marketing<span></span></div></a>
-        <a class="tile reveal" href="#consult"><img src="https://images.unsplash.com/photo-1634392885534-7655859fb2f8?w=1100&q=80" alt="Dark wood dining room set for a conversation" loading="lazy" /><div class="label cap">Book a Consultation<span></span></div></a>
+        <a class="tile reveal" href="team.html#standard"><img src="https://images.unsplash.com/photo-1749548993354-d6b48529702d?w=1400&q=80" alt="Stone fireplace in a warm living room" loading="lazy" /><div class="label cap">Our Approach<span></span></div></a>
+        <a class="tile reveal" href="marketing.html"><img src="https://images.unsplash.com/photo-1748063578185-3d68121b11ff?w=1400&q=80" alt="Modern home lit at twilight" loading="lazy" /><div class="label cap">How We Market<span></span></div></a>
+        <a class="tile reveal" href="contact.html"><img src="https://images.unsplash.com/photo-1698854536049-4ea3b8e4d035?w=1400&q=80" alt="Dark wood library" loading="lazy" /><div class="label cap">Start a Conversation<span></span></div></a>
       </div>
     </section>
 
-    <!-- Principles rotate here until real client words replace them -->
-    <section class="statement">
+    <section class="statement" id="testimonials">
       <div>
         <div class="cap eyebrow reveal">How we work</div>
-        <div class="rot" id="rot">
-          <p class="q">From groundbreaking to housewarming. We find the land, guide the build and sell the home, so the people who hire us deal with one team from the first walk of the lot to the last key.</p>
-          <div class="cap who">The Live Oak approach</div>
-        </div>
+        <div class="rot" id="rot"><p class="q"></p><div class="cap who"></div></div>
         <div class="dots" id="dots"></div>
       </div>
     </section>
 
-    <section class="block" id="standard">
-      <div class="wrap">
-        <div class="head">
-          <div class="reveal">
-            <div class="cap eyebrow">The Standard</div>
-            <h2 class="display">Priced like a builder. Run like a private office.</h2>
-            <div class="rule"></div>
-          </div>
-          <div class="reveal">
-            <p>Live Oak Reserve is the luxury real estate team of Victory Formation Ventures. We source land, develop it and represent the people who build on it, so we price a home the way a builder would: from real comps, real construction costs and what the land is truly worth.</p>
-            <p>A small team, deeply prepared. You get our cell phones, day or night, and boots on the ground from the first conversation to the closing table.</p>
-          </div>
-        </div>
-        <div class="points">
-          <div class="reveal"><div class="cap n">01</div><h3>Honest pricing</h3><p>An underwritten number you can defend, not the highest number that wins the listing.</p></div>
-          <div class="reveal"><div class="cap n">02</div><h3>Straight answers</h3><p>Fees agreed in writing before anything starts. Your costs quoted up front, including the owner's title policy.</p></div>
-          <div class="reveal"><div class="cap n">03</div><h3>A plan if it stalls</h3><p>A review date set on day one, with the next move agreed in advance: price, presentation or pause.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block" id="marketing">
-      <div class="wrap">
-        <div class="head">
-          <div class="reveal">
-            <div class="cap eyebrow">Luxury Marketing</div>
-            <h2 class="display">Every home treated as a production, not a listing.</h2>
-            <div class="rule"></div>
-          </div>
-          <div class="reveal"><p>Fewer, better launches. Filmed and photographed the way the home deserves, shown first to the people most likely to buy it, and only then released to the open market.</p></div>
-        </div>
-        <div class="split">
-          <div class="reveal">
-            <div class="cap col-title">Estates and established homes</div>
-            <dl>
-              <dt>A film, not a walkthrough</dt><dd>Shot and edited for the property, with the land given as much screen time as the kitchen.</dd>
-              <dt>Architectural photography and drone</dt><dd>Twilight, aerials and the view corridors that make Hill Country lots worth what they cost.</dd>
-              <dt>A site of its own</dt><dd>One address, one page, carried across Instagram, YouTube and targeted paid reach.</dd>
-            </dl>
-          </div>
-          <div class="reveal">
-            <div class="cap col-title">New construction</div>
-            <dl>
-              <dt>The build as a story</dt><dd>Documentary progress from dirt to drywall to done, so buyers follow the home before it exists.</dd>
-              <dt>Renderings on site</dt><dd>Branded signage with the elevation and plan from the first day of construction.</dd>
-              <dt>Builders named and featured</dt><dd>In Austin the builder's name sells the house, so we put it front and center.</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block oakband">
-      <div class="wrap">
-        <div class="head">
-          <div class="reveal">
-            <div class="cap eyebrow">How a sale runs</div>
-            <h2 class="display">Private first. Public by design.</h2>
-            <div class="rule"></div>
-          </div>
-          <div class="reveal"><p>Every launch moves through three phases, so the best buyers see a home before the portals do and the days-on-market clock never starts early.</p></div>
-        </div>
-        <div class="points">
-          <div class="reveal"><div class="cap n">Phase 01</div><h3>Private</h3><p>Shared only with <span class="js-cname-plain">The Collection</span> and our matched buyer network. No MLS, no portals.</p></div>
-          <div class="reveal"><div class="cap n">Phase 02</div><h3>Coming soon</h3><p>The film and photography go public on the home's own page and our channels, still ahead of the MLS.</p></div>
-          <div class="reveal"><div class="cap n">Phase 03</div><h3>Active</h3><p>Live on the MLS and every portal with a finished campaign behind it, not a scramble.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block" id="regions">
-      <div class="wrap">
-        <div class="head">
-          <div class="reveal">
-            <div class="cap eyebrow">Neighborhoods</div>
-            <h2 class="display">The Texas Hill Country</h2>
-            <div class="rule"></div>
-          </div>
-          <div class="reveal"><p>Estate homes, lake properties and new construction from Austin's west side to the hills beyond it: Travis, Williamson and Hays counties.</p></div>
-        </div>
-        <div class="regions">
-          <div class="region reveal"><img src="media/pool.jpg" alt="Modern home with pool at dusk" loading="lazy" /><div class="txt"><div class="cap tag">Travis County</div><h3>West Austin</h3><p>Tarrytown, Westlake, Rollingwood, Barton Creek</p></div></div>
-          <div class="region reveal"><img src="media/hilllake.jpg" alt="Hillside home above Lake Travis" loading="lazy" /><div class="txt"><div class="cap tag">Travis County</div><h3>The Lakes</h3><p>Lake Austin, Lake Travis, Lakeway, Spicewood</p></div></div>
-          <div class="region reveal"><img src="media/oaksunset.jpg" alt="Live oak at sunset" loading="lazy" /><div class="txt"><div class="cap tag">Hays and Williamson</div><h3>Hill Country</h3><p>Dripping Springs, Wimberley, Georgetown, Liberty Hill</p></div></div>
-        </div>
-      </div>
+    <section class="listings" id="properties" style="border-top:1px solid var(--line)">
+      <div class="wrap" style="text-align:center;margin-bottom:50px"><div class="cap reveal" style="color:var(--sand)">Now Showing</div></div>
+      <div class="listings__grid" id="featured"></div>
     </section>
 
     <section class="collection" id="collection">
       <div class="bg" role="img" aria-label="Aerial view of Hill Country lake and hills"></div>
-      <div class="inner">
-        <div class="reveal">
-          <h2 class="display js-cname">The Collection</h2>
-          <p>Private exclusives, market notes and opportunities across the Texas Hill Country, shared with our list before they reach the open market.</p>
-          <form onsubmit="return joinCollection(event)">
-            <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address" />
-            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" />
-            <button class="btn" type="submit">Request access</button>
-          </form>
-          <div class="fine" id="c-note">Every request is reviewed personally. We never share your details.</div>
-        </div>
-      </div>
+      <div class="inner"><div class="reveal">
+        <h2 class="display js-cname">The Limestone Collection</h2>
+        <p>Off-market homes, early looks at new construction and our notes on the Hill Country market. For members only, and always first.</p>
+        <form class="js-collection">
+          <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address" />
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" />
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <div class="fine js-note">By signing up you agree to our <a href="terms.html">Terms and Conditions</a>. Every request is reviewed personally.</div>
+      </div></div>
     </section>
 
-    <section class="block consult" id="consult">
-      <div class="wrap">
-        <div class="head">
-          <div class="reveal">
-            <div class="cap eyebrow">Book a Consultation</div>
-            <h2 class="display">Start with a conversation.</h2>
-            <div class="rule"></div>
-          </div>
-          <div class="reveal"><p>Buying, selling or building, tell us where you are and what you have in mind. A member of the team will reach out personally, usually the same day.</p></div>
-        </div>
-        <form onsubmit="return bookConsult(event)" class="reveal">
-          <div><label class="cap" for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name" /></div>
-          <div><label class="cap" for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email" /></div>
-          <div><label class="cap" for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" /></div>
-          <div><label class="cap" for="f-int">I am</label>
-            <select id="f-int" name="interest"><option>Buying</option><option>Selling</option><option>Buying and selling</option><option>Building a custom home</option><option>A landowner</option><option>An investor or builder</option></select></div>
-          <div><label class="cap" for="f-area">Area</label>
-            <select id="f-area" name="area"><option>West Austin</option><option>The Lakes</option><option>Hill Country</option><option>Travis County</option><option>Williamson County</option><option>Hays County</option><option>Not sure yet</option></select></div>
-          <div><label class="cap" for="f-time">Timing</label>
-            <select id="f-time" name="timeline"><option>Now</option><option>Within 3 months</option><option>3 to 12 months</option><option>Just exploring</option></select></div>
-          <div class="full"><label class="cap" for="f-msg">Anything we should know</label><textarea id="f-msg" name="message" placeholder="Neighborhoods, budget, the home you have in mind"></textarea></div>
-          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" />
-          <div class="full row-end"><button class="btn" type="submit">Request a consultation</button><span class="fine" id="f-note" style="margin:0">We reply personally.</span></div>
-        </form>
-      </div>
-    </section>
   </main>
 
-  <footer>
-    <div class="top">
-      <div><div class="display mark">Live Oak Reserve<small>A Victory Formation Ventures team</small></div></div>
-      <div><h4 class="cap">Explore</h4><ul><li><a href="#standard">The Standard</a></li><li><a href="#marketing">Marketing</a></li><li><a href="#regions">Neighborhoods</a></li><li><a href="#collection" class="js-cname">The Collection</a></li></ul></div>
-      <div><h4 class="cap">Contact</h4><ul><li><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></li><li><a href="tel:+17376005101">(737) 600-5101</a></li><li>Austin, Texas</li></ul></div>
-      <div><h4 class="cap">Company</h4><ul><li><a href="../">Victory Formation Ventures</a></li><li><a href="https://dashboard.victoryformationventures.com/">Team login</a></li></ul></div>
+  <footer class="foot">
+    <div class="brand display">Live Oak Reserve</div>
+    <div class="cols3">
+      <div><h4 class="cap">Sitemap</h4><ul><li><a href="./">Home</a></li><li><a href="properties.html">Residential</a></li><li><a href="sellers.html">Sellers</a></li><li><a href="buyers.html">Buyers</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      <div><h4 class="cap">Contact</h4><ul><li><a href="tel:+17376005101">(737) 600-5101</a></li><li><a href="mailto:gabe@victoryformationventures.com">gabe@victoryformationventures.com</a></li><li><a href="https://instagram.com/liveoakreservetx" target="_blank" rel="noopener">@liveoakreservetx</a></li></ul></div>
+      <div><h4 class="cap">Address</h4><ul><li>3004 Webberville Road #2</li><li>Austin, TX 78702</li></ul></div>
     </div>
     <div class="legal">
-      <p>Live Oak Reserve is a team of Victory Formation Ventures LLC, serving the Texas Hill Country: Travis, Williamson and Hays counties. Brokerage services will be offered through a licensed Texas real estate broker once licensing is complete. Nothing on this page is an offer to buy or sell property.</p>
-      <p>&copy; <span id="yr"></span> Victory Formation Ventures LLC. Photography: Unsplash.</p>
+      <div class="bk">BROKERAGE</div>
+      <p>Live Oak Reserve is a team at <b>Brokerage</b>, a project of Victory Formation Ventures LLC<br>
+      Brokerage Address, Austin, Texas &middot; Firm license 000000<br>
+      Office (000) 000-0000 &middot; Equal Housing Opportunity</p>
+    </div>
+    <div class="extra">
+      <span><a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener">Texas Real Estate Commission Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
+      <span>&copy; <span class="js-yr"></span> Victory Formation Ventures LLC &middot; <a href="https://dashboard.victoryformationventures.com/">Team login</a></span>
     </div>
   </footer>
-
+  <script src="assets/lo.js"></script>
   <script>
-    /* ---- settings ---- */
-    const COLLECTION_NAME = 'The Limestone Collection';
-    const LO_API = 'https://script.google.com/macros/s/AKfycbxWJd7NmOrIyq-S0waYoBIN2ErTHaN__AOFV02-Gr8dt4NRdHrkXwfuYVES9PQ0pThK/exec';   // Live Oak back office web app URL (Apps Script). Empty = email fallback.
-    const ACCESS_CODE = 'liveoak';
-
-    document.querySelectorAll('.js-cname').forEach(e => e.textContent = COLLECTION_NAME);
-    document.querySelectorAll('.js-cname-plain').forEach(e => e.textContent = COLLECTION_NAME);
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    /* ---- gate ---- */
-    const KEY = 'liveoak-access';
-    function open_() { document.body.classList.remove('locked'); document.getElementById('gate').style.display = 'none'; }
-    function unlock(e) {
-      e.preventDefault();
-      if (document.getElementById('code').value.trim().toLowerCase() === ACCESS_CODE) { try { sessionStorage.setItem(KEY, '1'); } catch (_) {} open_(); }
-      else document.getElementById('err').textContent = 'That code did not match.';
-      return false;
-    }
-    try { if (sessionStorage.getItem(KEY) === '1') open_(); } catch (_) {}
-
-    /* ---- header + drawer ---- */
-    const bar = document.getElementById('bar');
-    addEventListener('scroll', () => bar.classList.toggle('solid', scrollY > innerHeight * 0.6), { passive: true });
-    function drawer(o) { document.getElementById('drawer').classList.toggle('open', o); }
-
-    /* ---- reveal ---- */
-    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: .14 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    /* ---- rotating principles ---- */
-    const LINES = [
-      ['From groundbreaking to housewarming. We find the land, guide the build and sell the home, so the people who hire us deal with one team from the first walk of the lot to the last key.', 'The Live Oak approach'],
-      ['We pick up the phone day or night. When a deal stalls nobody gets paid, so we keep it moving: the city, the zoning, the lender, everyone.', 'Boots on the ground'],
-      ['Every builder\'s buy box stays private, and we never bring a lot far outside someone\'s number. Relationships are the whole business.', 'Discretion'],
-      ['Proven in Nashville, now in Austin. The same two-partner team, bringing a model that works to the Texas Hill Country.', 'Where we come from']
-    ];
-    const rot = document.getElementById('rot'), dots = document.getElementById('dots'); let ri = 0, rt;
-    LINES.forEach((_, i) => { const b = document.createElement('button'); b.setAttribute('aria-label', 'Show ' + (i + 1)); b.onclick = () => show(i, true); dots.appendChild(b); });
-    function show(i, user) {
-      ri = i; rot.style.opacity = 0;
-      setTimeout(() => { rot.querySelector('.q').textContent = LINES[i][0]; rot.querySelector('.who').textContent = LINES[i][1]; rot.style.opacity = 1; }, 450);
-      [...dots.children].forEach((d, k) => d.classList.toggle('on', k === i));
-      if (user) { clearInterval(rt); rt = setInterval(() => show((ri + 1) % LINES.length), 8000); }
-    }
-    show(0); rt = setInterval(() => show((ri + 1) % LINES.length), 8000);
-
-    /* ---- forms: back office first, email fallback ---- */
-    async function send(payload, subject) {
-      if (LO_API) {
-        await fetch(LO_API, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) });
-        return true;
-      }
-      const r = await fetch('https://formsubmit.co/ajax/gabe@victoryformationventures.com', {
-        method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(Object.assign({ _subject: subject, _template: 'table', _captcha: 'false' }, payload))
-      });
-      const d = await r.json(); return d.success === true || d.success === 'true';
-    }
-    function joinCollection(e) {
-      e.preventDefault(); const f = e.target, b = f.querySelector('button'), n = document.getElementById('c-note');
-      if (f.website.value) return false;
-      b.disabled = true; b.textContent = 'Sending';
-      send({ action: 'member', email: f.email.value, source: 'liveoak-site' }, '[Live Oak] ' + COLLECTION_NAME + ' request')
-        .then(ok => { if (!ok) throw 0; f.reset(); b.textContent = 'Received'; n.textContent = 'Thank you. We will be in touch personally.'; })
-        .catch(() => { b.disabled = false; b.textContent = 'Request access'; n.textContent = 'Something went wrong. Email gabe@victoryformationventures.com.'; });
-      return false;
-    }
-    function bookConsult(e) {
-      e.preventDefault(); const f = e.target, b = f.querySelector('button[type=submit]'), n = document.getElementById('f-note');
-      if (f.website.value) return false;
-      b.disabled = true; b.textContent = 'Sending';
-      send({ action: 'lead', name: f.name.value, email: f.email.value, phone: f.phone.value, interest: f.interest.value, area: f.area.value, timeline: f.timeline.value, message: f.message.value, source: 'liveoak-consult' }, '[Live Oak] Consultation request, ' + f.name.value)
-        .then(ok => { if (!ok) throw 0; f.reset(); b.textContent = 'Received'; n.textContent = 'Thank you. We will reach out personally.'; })
-        .catch(() => { b.disabled = false; b.textContent = 'Request a consultation'; n.textContent = 'Something went wrong. Email gabe@victoryformationventures.com.'; });
-      return false;
-    }
+    fetch('data/properties.json').then(r => r.json()).then(list => {
+      const g = document.getElementById('featured');
+      if (!list.length) { g.outerHTML = '<div class="empty reveal"><div class="cap eyebrow">Coming soon</div><h2 class="display">Our first Austin homes launch privately</h2><p>New listings go to members of <span class="js-cname">The Limestone Collection</span> first, then to our matched buyer network, before the open market.</p><a class="btn" href="#collection">Request access</a></div>'; document.querySelectorAll('.js-cname').forEach(e => e.textContent = LO.COLLECTION); loReveal(); return; }
+      g.innerHTML = list.slice(0, 3).map(propCard).join(''); loReveal(g);
+    });
   </script>
+  <script src="assets/props.js"></script>
 </body>
 </html>

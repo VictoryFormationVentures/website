@@ -1,0 +1,766 @@
+[
+ {
+  "slug": "westlake",
+  "name": "Westlake",
+  "group": "area",
+  "place": "West Lake Hills and surrounding 78746 / 78733, Travis County",
+  "schools": "Eanes ISD (Westlake High School; confirm campus by address)",
+  "setting": "Westlake climbs into the hills just west of MoPac and Loop 360, with winding roads, limestone ledges and thick cedar and live oak cover. The City of West Lake Hills is its own small incorporated town, and the western side tends to have the larger, more private lots. It feels secluded but sits minutes from central Austin.",
+  "houses": "A mix of original 1960s to 1990s ranch and contemporary homes, many being renovated or replaced with new modern and Hill Country custom builds. Wooded lots, often with views, are larger than in central Austin.",
+  "todo": [
+   {
+    "name": "Wild Basin Wilderness Preserve",
+    "line": "A 227 acre preserve off Loop 360 with about 2.5 miles of hiking trails."
+   },
+   {
+    "name": "Barton Creek Greenbelt",
+    "line": "Miles of creekside trail and swimming holes such as Sculpture Falls."
+   },
+   {
+    "name": "Pennybacker Bridge Overlook",
+    "line": "A short, steep climb to one of the best-known views of the 360 bridge and Lake Austin."
+   }
+  ],
+  "dining": [
+   {
+    "name": "Jack Allen's Kitchen (Capital of Texas Hwy)",
+    "line": "Local favorite for Texas comfort food with a farm-sourced menu."
+   },
+   {
+    "name": "The Grove Wine Bar & Kitchen",
+    "line": "Wine-focused bistro on Bee Cave Road with a large shaded patio."
+   },
+   {
+    "name": "Taqueria de Diez",
+    "line": "New taqueria that opened in West Lake Hills in summer 2026."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Barton Creek Country Club",
+    "line": "Private club with four championship courses just south of Westlake."
+   },
+   {
+    "name": "Westlake Country Club (formerly Lost Creek Country Club)",
+    "line": "Private par 71 course with pools, fitness and racquet sports."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "10 to 15 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "22 to 30 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/neighborhoods/westlake",
+   "https://communityimpact.com/lake-travis-westlake/dining/",
+   "https://grovewinebar.com/"
+  ]
+ },
+ {
+  "slug": "tarrytown",
+  "name": "Tarrytown",
+  "group": "area",
+  "place": "Austin (78703), Travis County",
+  "schools": "Austin ISD (Casis Elementary, O. Henry Middle, Austin High; confirm by address)",
+  "setting": "Tarrytown is one of central Austin's oldest and most established neighborhoods, set between MoPac and Lake Austin on gently rolling ground. Streets are lined with mature live oaks and pecans, and the lake, Deep Eddy and Lady Bird Lake trails are all close by. It feels residential and quiet while being only a few minutes from downtown.",
+  "houses": "Original 1930s Tudor and Craftsman cottages and mid-century ranches sit alongside renovations and new contemporary builds. Lots are often around 75 by 150 feet, roughly a quarter acre or more, with big trees.",
+  "todo": [
+   {
+    "name": "Deep Eddy Pool",
+    "line": "Spring-fed public pool dating to 1915, open year round."
+   },
+   {
+    "name": "Red Bud Isle",
+    "line": "A 13 acre island park on Lake Austin, popular as an off-leash dog area."
+   },
+   {
+    "name": "Mayfield Park and Nature Preserve",
+    "line": "About 23 acres of gardens and trails, known for its resident peacocks."
+   }
+  ],
+  "dining": [
+   {
+    "name": "Jeffrey's",
+    "line": "Long-running Clarksville fine dining spot with a refined American menu."
+   },
+   {
+    "name": "Quince Lakehouse",
+    "line": "Lake Austin Boulevard restaurant with a global menu and water views."
+   },
+   {
+    "name": "Pool Burger",
+    "line": "Casual burger and cocktail stand beside Deep Eddy Pool."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Lions Municipal Golf Course",
+    "line": "Public 18 hole course open since 1928, right in the neighborhood."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "8 to 15 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "20 to 25 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/the-source/tarrytown-neighborhood-guide",
+   "https://austin.citycast.fm/neighborhood-guides/get-to-know-tarrytown",
+   "https://thekeenangroup.com/the-source/austin-best-restaurants-2026"
+  ]
+ },
+ {
+  "slug": "rollingwood",
+  "name": "Rollingwood",
+  "group": "area",
+  "place": "City of Rollingwood (78746), Travis County",
+  "schools": "Mostly Eanes ISD (Eanes or Cedar Creek Elementary, Hill Country Middle, Westlake High); a small section may be Austin ISD, so confirm by address",
+  "setting": "Rollingwood is a small incorporated city of about 1,600 residents with its own police and zoning, tucked between Zilker Park and Bee Caves Road. The ground is flatter than neighboring West Lake Hills, and the streets feel quiet and leafy. Zilker, Barton Springs and the greenbelt are all within a few minutes.",
+  "houses": "Older ranch homes on generous lots are steadily being replaced by large custom and modern builds. Lots are commonly a quarter acre or more, some approaching a half acre, with mature trees.",
+  "todo": [
+   {
+    "name": "Zilker Park and Barton Springs Pool",
+    "line": "Austin's signature 351 acre park and spring-fed pool, just east of town."
+   },
+   {
+    "name": "Barton Creek Greenbelt (Gus Fruh access)",
+    "line": "Trailhead on the southern edge of the neighborhood."
+   },
+   {
+    "name": "Rollingwood Park",
+    "line": "Community park on Nixon Drive with a playground and garden."
+   }
+  ],
+  "dining": [
+   {
+    "name": "Uchi",
+    "line": "Acclaimed Japanese restaurant on South Lamar."
+   },
+   {
+    "name": "Odd Duck",
+    "line": "Creative small plates built around local farms, also on South Lamar."
+   },
+   {
+    "name": "Chuy's (original)",
+    "line": "The Barton Springs Road original of the Tex-Mex chain."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Butler Pitch and Putt",
+    "line": "Nine hole par 3 course in Zilker Park."
+   },
+   {
+    "name": "Barton Creek Country Club",
+    "line": "Private club with four courses about 10 to 15 minutes southwest."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "5 to 10 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "15 to 20 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/neighborhoods/rollingwood-austin"
+  ]
+ },
+ {
+  "slug": "barton-creek",
+  "name": "Barton Creek",
+  "group": "area",
+  "place": "Southwest Austin (78735 / 78733), Travis County",
+  "schools": "Split between Eanes ISD and Austin ISD depending on the section (sources disagree; confirm by address)",
+  "setting": "Barton Creek is a large golf and resort community on rugged Hill Country terrain southwest of downtown, cut by canyons and the creek it is named for. Several gated enclaves sit within it, each with its own character and HOA. Many homes look out over fairways, ravines or long hill views.",
+  "houses": "Large custom estates in Mediterranean, Texas Hill Country and contemporary styles, plus smaller garden homes in some sections. Lots range from about a quarter acre to three acres or more.",
+  "todo": [
+   {
+    "name": "Omni Barton Creek Resort and Spa",
+    "line": "Full resort in the community with spa, pools and dining."
+   },
+   {
+    "name": "Barton Creek Greenbelt",
+    "line": "Creekside trails and swimming holes reachable from the area."
+   }
+  ],
+  "dining": [
+   {
+    "name": "Hill Country Dining Room (Omni Barton Creek)",
+    "line": "The resort's fine dining room, a long-time AAA Four Diamond holder."
+   },
+   {
+    "name": "Veranda (Omni Barton Creek)",
+    "line": "Casual resort dining overlooking the Fazio Foothills course."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Barton Creek Country Club / Omni Barton Creek",
+    "line": "Four courses: Fazio Foothills, Fazio Canyons, Crenshaw Cliffside and Palmer Lakeside."
+   },
+   {
+    "name": "Westlake Country Club (formerly Lost Creek Country Club)",
+    "line": "Private club just north in Lost Creek."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "20 to 30 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "25 to 35 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/neighborhoods/barton-creek-austin",
+   "https://bramlettpartners.com/areas/west/barton-creek",
+   "https://www.omnihotels.com/hotels/austin-barton-creek"
+  ]
+ },
+ {
+  "slug": "lake-austin",
+  "name": "Lake Austin",
+  "group": "area",
+  "place": "Lake Austin shoreline, Austin and unincorporated Travis County",
+  "schools": "Varies by shore: Austin ISD, Eanes ISD, Leander ISD or Lake Travis ISD (confirm by address)",
+  "setting": "Lake Austin is a roughly 20 mile stretch of the Colorado River held at a near-constant level, which makes it ideal for private docks and water sports. The shoreline mixes steep limestone bluffs, quiet coves and wooded hills. Homes run from the eastern shore near Tarrytown out to River Place and Steiner Ranch on the west.",
+  "houses": "Waterfront estates with private boat docks and lifts are the defining product, alongside some lake-access condos and townhomes. Styles range from classic Texas stone to sharp modern glass designs, and lot sizes vary widely with the shoreline.",
+  "todo": [
+   {
+    "name": "Mount Bonnell (Covert Park)",
+    "line": "Classic lookout over Lake Austin reached by a short stair climb."
+   },
+   {
+    "name": "Emma Long Metropolitan Park",
+    "line": "City park on the lake with swimming, boat ramp and Turkey Creek Trail."
+   },
+   {
+    "name": "Lake Austin Spa Resort",
+    "line": "Destination spa resort on the water along the western shore."
+   }
+  ],
+  "dining": [
+   {
+    "name": "Hula Hut",
+    "line": "Lakeside Tex-Mex with a big deck over the water on Lake Austin Boulevard."
+   },
+   {
+    "name": "Ski Shores Cafe",
+    "line": "Laid-back waterfront cafe on Pearce Road, reachable by boat or car."
+   },
+   {
+    "name": "County Line on the Lake",
+    "line": "Barbecue on Bull Creek just off the lake."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Barton Creek Country Club",
+    "line": "Private four course club to the south."
+   },
+   {
+    "name": "Westlake Country Club (formerly Lost Creek Country Club)",
+    "line": "Private club near the central shore."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "10 to 30 min, depending on the shore"
+   },
+   {
+    "to": "AUS airport",
+    "time": "25 to 45 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/neighborhoods/lake-austin",
+   "https://www.hulahut.com/",
+   "https://www.skishorescafe.com/"
+  ]
+ },
+ {
+  "slug": "lakeway-lake-travis",
+  "name": "Lakeway and Lake Travis",
+  "group": "area",
+  "place": "City of Lakeway (78734 / 78738), Travis County",
+  "schools": "Lake Travis ISD (Lake Travis High School; confirm campus by address)",
+  "setting": "Lakeway sits on the south shore of Lake Travis, wedged between the water and rolling Hill Country ridges. Golf courses, marinas and greenbelts are woven through the city, and many streets have lake or canyon views. It is a full-time resort-style town with its own shopping and medical services.",
+  "houses": "Everything from lock-and-leave condos and golf villas to large waterfront estates, with many homes built from the 1970s on and newer custom builds in gated sections. Lot sizes vary from compact golf course lots to an acre or more on the water.",
+  "todo": [
+   {
+    "name": "Lakeway City Park",
+    "line": "A 64 acre park with a paved loop and lake swimming access."
+   },
+   {
+    "name": "Mansfield Dam Park",
+    "line": "Lakeside county park known for swimming and scuba access."
+   },
+   {
+    "name": "Pace Bend Park",
+    "line": "Large Travis County park with cliffs and coves about 20 minutes west."
+   }
+  ],
+  "dining": [
+   {
+    "name": "The Oasis on Lake Travis",
+    "line": "Tiered decks with famous sunset views over the lake."
+   },
+   {
+    "name": "Sixty-Three Restaurant and Bar",
+    "line": "Lakeway Resort and Spa's restaurant overlooking the water."
+   },
+   {
+    "name": "The Grove Wine Bar and Kitchen (Lakeway)",
+    "line": "Wine bar and bistro on RR 620."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "The Clubs of Lakeway",
+    "line": "Live Oak and Yaupon courses, the original Lakeway golf."
+   },
+   {
+    "name": "The Hills Country Club",
+    "line": "Private four course club including the Jack Nicklaus Signature course."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "25 to 35 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "35 to 45 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/neighborhoods/lakeway",
+   "https://oasis-austin.com/",
+   "https://www.lakewayresortandspa.com/dining",
+   "https://grovewinebar.com/"
+  ]
+ },
+ {
+  "slug": "dripping-springs",
+  "name": "Dripping Springs",
+  "group": "area",
+  "place": "City of Dripping Springs (78620), Hays County",
+  "schools": "Dripping Springs ISD",
+  "setting": "Dripping Springs sits on US 290 at the edge of the Hill Country, about 25 miles west of downtown Austin, and calls itself a wedding capital thanks to its many ranch venues. The land opens up into rolling pasture, oak motts and creek valleys, with wineries, distilleries and breweries along the back roads. It keeps a small town feel even as new communities grow around it.",
+  "houses": "Acreage ranches and custom Hill Country homes in stone and metal roofs, along with newer master-planned neighborhoods. Lots range from suburban sites to multi-acre tracts outside town. No reliable recent area-wide price figure found.",
+  "todo": [
+   {
+    "name": "Hamilton Pool Preserve",
+    "line": "Collapsed grotto and waterfall; reservations are required, and swimming depends on conditions."
+   },
+   {
+    "name": "Treaty Oak Distilling",
+    "line": "Distillery on a 24 acre ranch with tastings, tours and live music."
+   }
+  ],
+  "dining": [
+   {
+    "name": "The Bistro at Texas Hill Country Olive Co.",
+    "line": "Daily lunch among olive orchards on West Fitzhugh Road."
+   },
+   {
+    "name": "The Salt Lick BBQ (Driftwood)",
+    "line": "Famous open-pit barbecue a short drive southeast."
+   },
+   {
+    "name": "Trattoria Lisina (Driftwood)",
+    "line": "Tuscan-style Italian set at a winery."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Driftwood Golf and Ranch Club",
+    "line": "Private Discovery Land club with a Tom Fazio course, opened 2022."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "35 to 45 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "40 to 50 min"
+   }
+  ],
+  "sources": [
+   "https://parks.traviscountytx.gov/find-a-park/hamilton-pool",
+   "https://texashillcountryoliveco.com/pages/bistro",
+   "https://www.saltlickbbq.com/",
+   "https://www.treatyoakdistilling.com/",
+   "https://thekeenangroup.com/neighborhoods/driftwood-golf-ranch-club",
+   "https://cdn.fodors.com/world/north-america/usa/texas/the-hill-country/dripping-springs/restaurants"
+  ]
+ },
+ {
+  "slug": "georgetown",
+  "name": "Georgetown",
+  "group": "area",
+  "place": "City of Georgetown, Williamson County",
+  "schools": "Georgetown ISD for most of the city (confirm by address)",
+  "setting": "Georgetown sits about 30 miles north of downtown Austin along I-35, where the San Gabriel River runs through town. Its historic courthouse square is lined with restored Victorian storefronts, and the west side rolls into Hill Country terrain. It mixes small town character with fast-growing new neighborhoods.",
+  "houses": "Historic homes near the square, golf course neighborhoods, and gated Hill Country enclaves with Tuscan, Mediterranean and stone ranch styles. Luxury lots run from about a quarter acre in golf communities to larger canyon-edge homesites.",
+  "todo": [
+   {
+    "name": "Georgetown Square",
+    "line": "Historic courthouse square with shops, restaurants and seasonal festivals."
+   },
+   {
+    "name": "Blue Hole Park",
+    "line": "Popular swimming spot on the San Gabriel River near downtown."
+   },
+   {
+    "name": "Garey Park",
+    "line": "A 525 acre park on the west side with trails, fishing and horseback riding."
+   }
+  ],
+  "dining": [
+   {
+    "name": "Wildfire",
+    "line": "Upscale wood-fired grill on the historic square."
+   },
+   {
+    "name": "Monument Cafe",
+    "line": "Retro diner with a garden-to-table menu."
+   },
+   {
+    "name": "Goodfolks",
+    "line": "Bright, modern spot for elevated Southern comfort food."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Cimarron Hills Golf and Country Club",
+    "line": "Private Jack Nicklaus Signature course inside a gated community."
+   },
+   {
+    "name": "Berry Creek Country Club",
+    "line": "Private 18 hole club within the Berry Creek neighborhood."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "30 to 45 min off peak, longer at rush hour"
+   },
+   {
+    "to": "AUS airport",
+    "time": "35 to 50 min via SH 130"
+   }
+  ],
+  "sources": [
+   "https://lrgrealty.com/lrg-blog/moving-to-georgetown-tx/",
+   "https://lrgrealty.com/lrg-blog/cimarron-hills-neighborhood-guide/",
+   "https://lrgrealty.com/lrg-blog/?p=9553",
+   "https://austinot.com/best-restaurants-georgetown-tx",
+   "https://www.wildfiretexas.com/"
+  ]
+ },
+ {
+  "slug": "spanish-oaks",
+  "name": "Spanish Oaks",
+  "group": "development",
+  "place": "Bee Cave area off Highway 71 (Austin 78738 address), Travis County",
+  "schools": "Lake Travis ISD (Lake Travis High School; confirm campus by address)",
+  "setting": "Spanish Oaks is a gated golf community of roughly 900 acres in the hills along Highway 71 near Bee Cave. Large stretches of the land are left as preserved Hill Country, with canyons, elevation changes and long views. Two staffed gatehouses and a private club give it a quiet, secluded feel.",
+  "houses": "Mostly large custom homes, often 3,500 to 7,000 square feet or more, on homesites from about one acre to five acres or more. Styles lean toward refined Hill Country, Mediterranean and modern.",
+  "todo": [
+   {
+    "name": "Hamilton Pool Preserve",
+    "line": "Grotto and waterfall preserve to the west; reservations required."
+   },
+   {
+    "name": "Hill Country Galleria",
+    "line": "Open-air shopping and dining center in Bee Cave."
+   }
+  ],
+  "dining": [
+   {
+    "name": "Cafe Blue",
+    "line": "Seafood-focused restaurant at the Hill Country Galleria."
+   },
+   {
+    "name": "Tadashi",
+    "line": "Sushi and Japanese dishes in Bee Cave."
+   },
+   {
+    "name": "Trattoria Lisina",
+    "line": "Italian at a winery in nearby Driftwood."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Spanish Oaks Golf Club",
+    "line": "Private 18 hole Bobby Weed design with clubhouse and practice facilities; membership is separate from homeownership."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "25 to 35 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "30 to 40 min"
+   }
+  ],
+  "sources": [
+   "https://www.spanishoaks.com/",
+   "https://thekeenangroup.com/neighborhoods/spanish-oaks-austin",
+   "https://parks.traviscountytx.gov/find-a-park/hamilton-pool"
+  ]
+ },
+ {
+  "slug": "rough-hollow",
+  "name": "Rough Hollow",
+  "group": "development",
+  "place": "City of Lakeway (78738 / 78734), Travis County",
+  "schools": "Lake Travis ISD (Rough Hollow Elementary, Lake Travis Middle and High are common; confirm by address)",
+  "setting": "Rough Hollow is a master-planned community on the western edge of Lakeway with about three miles of Lake Travis shoreline. Its signature is a private yacht club and marina, tied to the neighborhoods by a long network of hike and bike trails. Hill Country ridges and canyons frame the newer sections, some of which are still being built.",
+  "houses": "A wide range, from move-up family homes and lock-and-leave product to custom lakeview and waterfront estates. Styles mix modern farmhouse, Hill Country stone and contemporary designs, on lots that grow larger toward the lake and premium ridges.",
+  "todo": [
+   {
+    "name": "Rough Hollow Yacht Club and Marina",
+    "line": "Private marina with slips, pool, fitness center and lake access."
+   },
+   {
+    "name": "Rough Hollow trail network",
+    "line": "Miles of hike and bike trails linking parks and neighborhoods."
+   },
+   {
+    "name": "Lakeway City Park",
+    "line": "A 64 acre city park with lake swimming access."
+   }
+  ],
+  "dining": [
+   {
+    "name": "The Oasis on Lake Travis",
+    "line": "Sunset views from tiered decks across the lake."
+   },
+   {
+    "name": "Sixty-Three Restaurant and Bar",
+    "line": "Lakeway Resort and Spa's waterfront restaurant."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "The Hills Country Club",
+    "line": "Private four course club a few minutes away."
+   },
+   {
+    "name": "The Clubs of Lakeway",
+    "line": "Live Oak and Yaupon courses in Lakeway."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "25 to 35 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "35 to 45 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/neighborhoods/rough-hollow-austin",
+   "https://seasoned.co/job/server-the-grille-at-rough-hollow-lakeway-tx_8fa7e508-003c-4015-9253-b0e8c0d73955",
+   "https://oasis-austin.com/"
+  ]
+ },
+ {
+  "slug": "the-hills",
+  "name": "The Hills",
+  "group": "development",
+  "place": "Village of The Hills, next to Lakeway (78738), Travis County",
+  "schools": "Lake Travis ISD (confirm campus by address)",
+  "setting": "The Hills is a gated golf community, set up as its own small village beside Lakeway, built around the courses of The Hills Country Club. Streets wind through hilly, wooded terrain with fairway, canyon and lake views. The Flintrock Falls section adds newer homes on the ridges.",
+  "houses": "Golf course villas and custom estates, many with stone and stucco exteriors and Hill Country or Mediterranean lines. Lots run from roughly a quarter acre to about two acres.",
+  "todo": [
+   {
+    "name": "Lakeway Resort and Spa",
+    "line": "Lakefront resort with spa, pools and dining a few minutes away."
+   },
+   {
+    "name": "Lakeway City Park",
+    "line": "Large city park with loop trail and lake access."
+   },
+   {
+    "name": "Hamilton Greenbelt",
+    "line": "Lakeway trail system with limestone bluffs."
+   }
+  ],
+  "dining": [
+   {
+    "name": "The Chophouse at The Hills",
+    "line": "Club dining room for members and their guests."
+   },
+   {
+    "name": "The Oasis on Lake Travis",
+    "line": "Sunset views across the lake."
+   },
+   {
+    "name": "The Grove Wine Bar and Kitchen (Lakeway)",
+    "line": "Wine bar and bistro on RR 620."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "The Hills Country Club",
+    "line": "Private Invited club with four courses: Signature (Jack Nicklaus), Flintrock Falls, Live Oak and Yaupon."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "25 to 35 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "35 to 45 min"
+   }
+  ],
+  "sources": [
+   "https://thekeenangroup.com/austin-country-clubs/hills-of-lakeway",
+   "https://invitedclubs.com/clubs/the-hills-country-club/life-at-the-hills",
+   "https://www.elliman.com/listing/34-tiburon-dr-the-hills-tx-78738/34995148",
+   "https://thekeenangroup.com/neighborhoods/lakeway"
+  ]
+ },
+ {
+  "slug": "costa-bella",
+  "name": "Costa Bella",
+  "group": "development",
+  "place": "Lake Travis, off RM 620 at Oak Grove Blvd (78734), Travis County",
+  "schools": "Lake Travis ISD (Hudson Bend Middle and Lake Travis High are listed; confirm elementary by address)",
+  "setting": "Costa Bella is a small gated enclave of about 62 custom homes on the hills above Lake Travis, between RM 620 and the water. Many homes have sweeping lake views, and residents share a private yacht club. It is quieter and more intimate than the big master-planned communities nearby.",
+  "houses": "Mostly Mediterranean-style estates in stone and stucco, typically 5,500 to 8,000 plus square feet, built largely in the late 1990s and 2000s. Homesites generally run from one to four acres. No recent dated price data found.",
+  "todo": [
+   {
+    "name": "Mansfield Dam Park",
+    "line": "Lakeside county park for swimming, diving and boating nearby."
+   },
+   {
+    "name": "Lakeway City Park",
+    "line": "City park with loop trail and lake access."
+   }
+  ],
+  "dining": [
+   {
+    "name": "The Oasis on Lake Travis",
+    "line": "Hillside decks with famous sunset views, a short drive north."
+   },
+   {
+    "name": "The Grove Wine Bar and Kitchen (Lakeway)",
+    "line": "Wine bar and bistro on RR 620."
+   },
+   {
+    "name": "Sixty-Three Restaurant and Bar",
+    "line": "Lakeway Resort and Spa's restaurant on the water."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "The Clubs of Lakeway",
+    "line": "Live Oak and Yaupon courses in nearby Lakeway."
+   },
+   {
+    "name": "The Hills Country Club",
+    "line": "Private four course club a few miles south."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "30 to 40 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "40 to 50 min"
+   }
+  ],
+  "sources": [
+   "https://www.homecity.com/costa-bella/",
+   "https://bramlettpartners.com/areas/lake-travis/costa-bella",
+   "https://oasis-austin.com/"
+  ]
+ },
+ {
+  "slug": "caliterra",
+  "name": "Caliterra",
+  "group": "development",
+  "place": "Dripping Springs (78620), Hays County",
+  "schools": "Dripping Springs ISD",
+  "setting": "Caliterra is a master-planned Hill Country community on the Dripping Springs side of the region, with Onion Creek running through it. Roughly 40 percent of the land is kept as open space, laced with several miles of trails, and the area carries a dark-sky designation that keeps nights starry. Amenities include pools, a fitness center, an on-site restaurant and coffee shop, and campsites.",
+  "houses": "Custom and semi-custom homes by builders such as Drees and David Weekley, roughly 2,500 to 6,000 square feet, in stone-and-stucco Hill Country and modern farmhouse styles. Homesites are 70, 80 and 110 foot wide lots, with some near an acre.",
+  "todo": [
+   {
+    "name": "Onion Creek access",
+    "line": "In-community creek access for fishing and wading."
+   },
+   {
+    "name": "Hamilton Pool Preserve",
+    "line": "Grotto and waterfall preserve to the north; reservations required."
+   }
+  ],
+  "dining": [
+   {
+    "name": "The Bistro at Texas Hill Country Olive Co.",
+    "line": "Daily lunch among olive orchards."
+   },
+   {
+    "name": "The Salt Lick BBQ (Driftwood)",
+    "line": "Famous open-pit barbecue nearby."
+   },
+   {
+    "name": "Trattoria Lisina (Driftwood)",
+    "line": "Italian dining at a winery."
+   }
+  ],
+  "clubs": [
+   {
+    "name": "Driftwood Golf and Ranch Club",
+    "line": "Private Tom Fazio course in nearby Driftwood."
+   }
+  ],
+  "commute": [
+   {
+    "to": "Downtown Austin",
+    "time": "35 to 45 min"
+   },
+   {
+    "to": "AUS airport",
+    "time": "40 to 50 min"
+   }
+  ],
+  "sources": [
+   "https://communityimpact.com/sponsored/wake-up-in-a-dream-hill-country-home-surrounded-by-nature-in-drees-homes-at-caliterra/",
+   "https://www.homecity.com/caliterra/",
+   "https://www.spyglassrealty.com/communities/the-ranch-at-caliterra",
+   "https://texashillcountryoliveco.com/pages/bistro"
+  ]
+ }
+]
