@@ -212,7 +212,7 @@
     function joinList(e) {
       e.preventDefault(); const f = e.target;
       const body = encodeURIComponent('Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\nPhone: ' + f.phone.value + '\nType: ' + f.type.value + '\n\n' + f.notes.value);
-      location.href = 'mailto:gabe@victoryformationventures.com?subject=' + encodeURIComponent('[Live Oak Reserve] Private access request — ' + f.name.value) + '&body=' + body;
+      location.href = 'mailto:gabe@victoryformationventures.com?subject=' + encodeURIComponent('[Live Oak Reserve] Private access request, ' + f.name.value) + '&body=' + body;
       return false;
     }
   </script>
