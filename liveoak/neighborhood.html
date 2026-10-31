@@ -28,7 +28,7 @@
   </div>
 
   <header class="bar" id="bar">
-    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small><em class="ph">[Brokerage Name]</em></small></a>
+    <a class="mark display" href="./">Live Oak Reserve<span class="divider"></span><small>Brokerage</small></a>
     <nav class="cap" aria-label="Main">
       <div class="dd"><button type="button" aria-haspopup="true">Residential</button><div class="menu"><a href="properties.html">Properties</a><a href="sellers.html">Sellers</a><a href="buyers.html">Buyers</a><a href="neighborhoods.html">Neighborhoods</a><a href="marketing.html">Marketing</a><a href="past-transactions.html">Past Transactions</a></div></div>
       <a href="team.html">Team</a>
@@ -57,10 +57,10 @@
       <div><h4 class="cap">Address</h4><ul><li>3004 Webberville Road #2</li><li>Austin, TX 78702</li></ul></div>
     </div>
     <div class="legal">
-      <div class="bk"><em class="ph">[Brokerage logo]</em></div>
-      <p>Live Oak Reserve is a team at <b><em class="ph">[Brokerage Name]</em></b>, a project of Victory Formation Ventures LLC<br>
-      <em class="ph">[Brokerage address]</em> &middot; Firm license <em class="ph">[License #]</em><br>
-      Office <em class="ph">[Office phone]</em> &middot; Equal Housing Opportunity</p>
+      <div class="bk">BROKERAGE</div>
+      <p>Live Oak Reserve is a team at <b>Brokerage</b>, a project of Victory Formation Ventures LLC<br>
+      Brokerage Address, Austin, Texas &middot; Firm license 000000<br>
+      Office (000) 000-0000 &middot; Equal Housing Opportunity</p>
     </div>
     <div class="extra">
       <span><a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener">Texas Real Estate Commission Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
@@ -81,12 +81,12 @@
       el.innerHTML = `
         <section class="banner"><div class="bg" style="background-image:url('${HIMG[h.slug] || 'https://images.unsplash.com/photo-1629767175742-768f60bf924e?w=2400&q=80'}')"></div>
           <div class="inner reveal"><div class="cap eyebrow">${h.group === 'development' ? 'Luxury Development' : 'Luxury Area'}</div><h1 class="display">${esc(h.name)}</h1><p>${esc(h.place)}${h.schools ? ' &middot; ' + esc(h.schools) : ''}</p></div></section>
-        <section class="p-sec"><div class="wrap"><h2 class="display reveal">What to expect</h2>
-          <div class="qa"><div class="reveal"><h3>The setting</h3><p>${esc(h.setting)}</p></div><div class="reveal"><h3>The homes</h3><p>${esc(h.houses)}</p></div></div></div></section>
-        ${list('Things to do', h.todo)}${list('Dining', h.dining)}${list('Golf and clubs', h.clubs)}
+        <section class="p-sec"><div class="wrap"><h2 class="display reveal">Overview</h2>
+          <div class="qa"><div class="reveal"><h3>The land</h3><p>${esc(h.setting)}</p></div><div class="reveal"><h3>The homes</h3><p>${esc(h.houses)}</p></div></div></div></section>
+        ${list('Out and about', h.todo)}${list('Where to eat', h.dining)}${list('Clubs', h.clubs)}
         ${h.commute && h.commute.length ? `<section class="p-sec"><div class="wrap"><h2 class="display reveal">Drive times</h2><p class="reveal" style="color:var(--t3);margin:-14px 0 24px;font-size:13px">Approximate, and traffic dependent.</p><div class="spec">${h.commute.map(c => `<div class="reveal"><div class="cap k">${esc(c.to)}</div><div class="v">${esc(c.time)}</div></div>`).join('')}</div>
           <p style="margin-top:22px"><a class="cap linkline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/${encodeURIComponent(h.name + ' ' + (h.place||'') + ' Texas')}">Get directions</a></p></div></section>` : ''}
-        <section class="p-sec"><div class="wrap"><h2 class="display reveal">Explore other ${h.group === 'development' ? 'developments' : 'areas'}</h2>
+        <section class="p-sec"><div class="wrap"><h2 class="display reveal">Nearby ${h.group === 'development' ? 'communities' : 'areas'}</h2>
           <div class="hoods__grid">${others.map(o => `<a class="hood reveal" href="neighborhood.html?n=${o.slug}"><img src="${HIMG[o.slug] || 'https://images.unsplash.com/photo-1629767175742-768f60bf924e?w=2400&q=80'}" alt="" loading="lazy" /><span class="hood__name">${esc(o.name)}</span></a>`).join('')}</div></div></section>
         <section class="p-sec"><div class="narrow" style="text-align:center"><h2 class="display reveal js-cname">The Limestone Collection</h2><p class="reveal" style="color:var(--t2)">Private exclusives in ${esc(h.name)} and across the Hill Country go to members first.</p><p class="reveal" style="margin-top:28px"><a class="btn" href="index.html#collection">Request access</a></p></div></section>`;
       document.querySelectorAll('.js-cname').forEach(e => e.textContent = LO.COLLECTION); loReveal(el);
