@@ -188,22 +188,10 @@
           <div class="full"><label>What are you looking for</label><textarea name="notes" rows="3" placeholder="Neighborhoods, budget, timing, anything helpful"></textarea></div>
           <div class="full"><button class="btn solid" type="submit">Request access</button></div>
         </form>
-        <p style="font-size:12px; color:var(--dim); margin-top:14px;">Until the brand launches, requests go to gabe@victoryformationventures.com.</p>
+        <p id="lo-note" style="font-size:12px; color:var(--dim); margin-top:14px;">Every request is read personally.</p>
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="eyebrow">Working notes (remove before launch)</div>
-        <div class="rule"></div>
-        <div class="notes">
-          <p><b>Name.</b> "Live Oak Reserve" leans on Austin's signature tree and the private-list idea. Alternatives if you want to test: Limestone Collective, Hill Country Reserve, Barton Creek Private, The Formation Collection.</p>
-          <p><b>What has to be true to launch.</b> Texas real estate licensing for whoever represents clients, a sponsoring broker or brokerage affiliation (Compass is the Eden Grove model; Austin options include Compass, Kuper Sotheby's, Moreland, Douglas Elliman), a photography and film partner, and an email platform for the Private Access list.</p>
-          <p><b>How the list would work.</b> The form above can post straight into a "VFV Private Access" Google Sheet the same way the dashboard forms do, so signups are captured from day one even before the brand goes public.</p>
-          <p><b>Access code.</b> Change it in this page's source (search for <code>ACCESS_CODE</code>). It is a courtesy gate to keep the concept out of search results, not a security measure.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer><div class="wrap">Live Oak Reserve is a working concept of Victory Formations Ventures LLC, Austin, Texas. Not yet offering brokerage services.</div></footer>
@@ -220,9 +208,16 @@
     }
     try { if (sessionStorage.getItem(KEY) === '1') { document.body.classList.remove('locked'); document.getElementById('gate').style.display = 'none'; } } catch (_) {}
     function joinList(e) {
-      e.preventDefault(); const f = e.target;
-      const body = encodeURIComponent('Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\nPhone: ' + f.phone.value + '\nType: ' + f.type.value + '\n\n' + f.notes.value);
-      location.href = 'mailto:gabe@victoryformationventures.com?subject=' + encodeURIComponent('[Live Oak Reserve] Private access request, ' + f.name.value) + '&body=' + body;
+      e.preventDefault(); const f = e.target; const note = document.getElementById('lo-note');
+      const btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending';
+      fetch('https://formsubmit.co/ajax/gabe@victoryformationventures.com', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ _subject: '[Live Oak Reserve] Private access request, ' + f.name.value, _template: 'table', _captcha: 'false',
+          name: f.name.value, email: f.email.value, phone: f.phone.value, type: f.type.value, notes: f.notes.value })
+      }).then(r => r.json()).then(d => {
+        if (d.success === 'true' || d.success === true) { f.reset(); note.textContent = 'Received. We will be in touch personally.'; btn.textContent = 'Sent'; }
+        else { throw new Error(); }
+      }).catch(() => { note.textContent = 'Something went wrong. Email gabe@victoryformationventures.com directly.'; btn.disabled = false; btn.textContent = 'Request access'; });
       return false;
     }
   </script>
