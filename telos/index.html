@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Telos · Custom Home Representation · Victory Formation Ventures</title>
+  <meta name="description" content="Telos is the custom home representation practice of Victory Formation Ventures: the owner's advocate from first sketch to keys across Travis, Williamson and Hays counties." />
+  <meta name="theme-color" content="#1A1A18" />
+  <link rel="icon" href="../assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:#1A1A18; --ink-2:#22221F; --limestone:#F3EBDD; --sand:#D8CAB2; --oak:#4E5A3E; --oak-deep:#3F4932;
+      --line:rgba(243,235,221,.16); --muted:rgba(243,235,221,.72);
+      --display:'Aboreto', Georgia, serif; --body:'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      --max:1200px; --pad:clamp(20px, 5vw, 64px);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ink); color:var(--limestone); font-family:var(--body); font-weight:300; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; }
+    .wrap { max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+    h1, h2, h3 { font-family:var(--display); font-weight:400; margin:0; text-transform:uppercase; }
+    h2 { font-size:clamp(26px, 3.4vw, 40px); letter-spacing:.1em; line-height:1.2; }
+    h3 { font-size:16px; letter-spacing:.14em; line-height:1.4; }
+    p { margin:0 0 14px; }
+    .eyebrow { font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--sand); font-weight:600; margin:0 0 18px; }
+    .btn { display:inline-block; padding:15px 30px; font-family:var(--body); font-size:11px; letter-spacing:.24em; text-transform:uppercase; font-weight:600; text-decoration:none; border:1px solid var(--limestone); background:var(--limestone); color:var(--ink); transition:background .2s, color .2s; }
+    .btn:hover { background:transparent; color:var(--limestone); }
+    .btn.line { background:transparent; color:var(--limestone); }
+    .btn.line:hover { background:var(--limestone); color:var(--ink); }
+
+    header { position:sticky; top:0; z-index:20; background:rgba(26,26,24,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+    .nav { display:flex; align-items:center; justify-content:space-between; height:72px; gap:20px; }
+    .brand { text-decoration:none; display:flex; align-items:baseline; gap:14px; }
+    .brand b { font-family:var(--display); font-weight:400; font-size:20px; letter-spacing:.42em; }
+    .brand span { font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); white-space:nowrap; }
+    .nav a.back { font-size:11px; letter-spacing:.22em; text-transform:uppercase; text-decoration:none; color:var(--muted); white-space:nowrap; }
+    .nav a.back:hover { color:var(--limestone); }
+    @media (max-width:640px) { .brand span { display:none; } }
+
+    .hero { min-height:84vh; display:grid; place-items:center; text-align:center; border-bottom:1px solid var(--line); position:relative; overflow:hidden; }
+    .hero::before { content:""; position:absolute; left:50%; top:50%; width:min(78vw,720px); aspect-ratio:1; transform:translate(-50%,-50%); border:1px solid var(--line); border-radius:50%; }
+    .hero::after { content:""; position:absolute; left:50%; top:50%; width:min(60vw,540px); aspect-ratio:1; transform:translate(-50%,-50%); border:1px solid rgba(78,90,62,.55); border-radius:50%; }
+    .hero .inner { position:relative; z-index:1; padding:110px var(--pad) 100px; max-width:820px; }
+    .hero h1 { font-size:clamp(54px, 10vw, 120px); letter-spacing:.42em; margin-right:-.42em; line-height:1; }
+    .hero .tag { margin:30px 0 8px; font-family:var(--display); font-size:clamp(15px,1.8vw,20px); letter-spacing:.16em; text-transform:uppercase; }
+    .hero .sub { margin:0 auto 38px; max-width:560px; color:var(--muted); font-size:15px; }
+    .hero .ctas { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .hero .by { margin-top:42px; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--sand); }
+
+    section { padding:104px 0; }
+    .why { display:grid; grid-template-columns:.9fr 1.1fr; gap:64px; align-items:start; }
+    .why .lead { font-size:clamp(17px,2vw,20px); line-height:1.8; color:var(--limestone); }
+    .why .greek { font-family:var(--display); font-size:13px; letter-spacing:.26em; color:var(--sand); margin-top:22px; }
+    @media (max-width:860px) { .why { grid-template-columns:1fr; gap:24px; } }
+
+    .services { display:grid; grid-template-columns:repeat(3,1fr); margin-top:52px; border-top:1px solid var(--line); }
+    .svc { padding:30px 30px 26px 0; border-bottom:1px solid var(--line); }
+    .svc:not(:nth-child(3n+1)) { padding-left:30px; border-left:1px solid var(--line); }
+    .svc .n { font-family:var(--display); font-size:12px; letter-spacing:.3em; color:var(--sand); margin-bottom:12px; }
+    .svc p { font-size:14px; color:var(--muted); margin:10px 0 0; }
+    @media (max-width:860px) { .services { grid-template-columns:1fr; } .svc, .svc:not(:nth-child(3n+1)) { padding:26px 0; border-left:0; } }
+
+    .process { background:var(--oak); }
+    .process .eyebrow { color:var(--limestone); opacity:.8; }
+    .steps { display:grid; grid-template-columns:repeat(5,1fr); margin-top:48px; border-top:1px solid rgba(243,235,221,.35); }
+    .step { padding:26px 22px 0 0; }
+    .step + .step { padding-left:22px; border-left:1px solid rgba(243,235,221,.25); }
+    .step .n { font-family:var(--display); font-size:34px; letter-spacing:.08em; opacity:.55; margin-bottom:10px; }
+    .step p { font-size:14px; color:rgba(243,235,221,.86); margin:10px 0 0; }
+    @media (max-width:960px) { .steps { grid-template-columns:1fr; } .step, .step + .step { padding:24px 0; border-left:0; border-bottom:1px solid rgba(243,235,221,.25); } }
+
+    .promise { text-align:center; border-bottom:1px solid var(--line); }
+    .promise p.big { font-family:var(--display); font-size:clamp(22px,3.2vw,34px); letter-spacing:.12em; text-transform:uppercase; line-height:1.45; max-width:860px; margin:0 auto 18px; }
+    .promise .rule { width:56px; height:2px; background:var(--oak); margin:28px auto; }
+    .pillars { display:grid; grid-template-columns:repeat(3,1fr); gap:0; max-width:900px; margin:40px auto 0; }
+    .pillars div { padding:0 22px; font-size:14px; color:var(--muted); }
+    .pillars div + div { border-left:1px solid var(--line); }
+    .pillars b { display:block; font-weight:600; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--limestone); margin-bottom:8px; }
+    @media (max-width:760px) { .pillars { grid-template-columns:1fr; gap:22px; } .pillars div + div { border-left:0; } }
+
+    .cta { text-align:center; }
+    .cta p { color:var(--muted); max-width:560px; margin:18px auto 30px; }
+
+    footer { border-top:1px solid var(--line); padding:36px 0; font-size:12px; color:var(--muted); }
+    footer .row { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    footer a { text-decoration:none; }
+    footer a:hover { color:var(--limestone); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><b>TELOS</b><span>Custom Home Representation</span></a>
+      <a class="back" href="../">Victory Formation Ventures</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="inner">
+        <p class="eyebrow">Custom Home Representation</p>
+        <h1>Telos</h1>
+        <p class="tag">Built to your purpose</p>
+        <p class="sub">The owner's advocate for custom homes across Travis, Williamson and Hays counties. On your side of the table, from the first sketch to the keys.</p>
+        <div class="ctas">
+          <a class="btn" href="../#contact">Start a conversation</a>
+          <a class="btn line" href="#how">How it works</a>
+        </div>
+        <p class="by">A Victory Formation Ventures practice</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap why">
+        <div>
+          <p class="eyebrow">Why Telos</p>
+          <h2>Everyone works for someone</h2>
+          <p class="greek">Telos (τέλος): the end goal, the purpose</p>
+        </div>
+        <div>
+          <p class="lead">A custom home is a two-year, seven-figure project with a dozen counterparties: architect, builder, lender, city, inspectors and trades. Each of them answers to someone. Telos answers to you.</p>
+          <p style="color:var(--muted);">We keep the vision, the budget and the schedule pointed at the home you set out to build, and we are in the room for every decision that moves them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <p class="eyebrow">What we handle</p>
+        <h2>From first sketch to keys</h2>
+        <div class="services">
+          <div class="svc"><div class="n">01</div><h3>Team selection</h3><p>Architect, builder and designer, matched to your vision and vetted on real Austin work.</p></div>
+          <div class="svc"><div class="n">02</div><h3>Budget and pro forma</h3><p>A real number before design gets ahead of it, tracked line by line to the end.</p></div>
+          <div class="svc"><div class="n">03</div><h3>Bids and contracts</h3><p>Apples-to-apples bids and contract terms read with your interests first.</p></div>
+          <div class="svc"><div class="n">04</div><h3>Draws and lenders</h3><p>Every draw request reviewed against work in place before a dollar moves.</p></div>
+          <div class="svc"><div class="n">05</div><h3>Site and schedule</h3><p>Boots on the ground every week, with the schedule held to the plan.</p></div>
+          <div class="svc"><div class="n">06</div><h3>Punch list to keys</h3><p>Final walkthroughs, warranty items and certificate of occupancy, done right.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="process">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2>Five stages, one advocate</h2>
+        <div class="steps">
+          <div class="step"><div class="n">I</div><h3>Vision</h3><p>Your goals, your land, your number.</p></div>
+          <div class="step"><div class="n">II</div><h3>Team</h3><p>The right architect and builder for the house.</p></div>
+          <div class="step"><div class="n">III</div><h3>Pre-construction</h3><p>Design, permits and a locked budget.</p></div>
+          <div class="step"><div class="n">IV</div><h3>Build</h3><p>Weekly site visits, draws and decisions.</p></div>
+          <div class="step"><div class="n">V</div><h3>Keys</h3><p>Punch list, CO and move-in day.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise">
+      <div class="wrap">
+        <p class="big">In every meeting, someone on your side</p>
+        <div class="rule"></div>
+        <div class="pillars">
+          <div><b>One fee, up front</b>Agreed before we start, with no markups from builders or trades.</div>
+          <div><b>Day or night</b>Pick up the phone and we answer.</div>
+          <div><b>It's all about relationships</b>The right people make it happen, even when it looks impossible.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <p class="eyebrow">Building in the Hill Country?</p>
+        <h2>Let's talk about your home</h2>
+        <p>Tell us about your land, your timeline and the home you have in mind.</p>
+        <a class="btn" href="../#contact">Start a conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <div>Telos is the custom home representation practice of Victory Formations Ventures LLC · Austin, Texas</div>
+      <div><a href="../">victoryformationventures.com</a></div>
+    </div>
+  </footer>
+</body>
+</html>
