@@ -59,7 +59,42 @@
 
     <section class="cine"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1757359056339-22968344cce6?w=2400&q=80');background-position:center"></div><p class="reveal">A price that misses on day one follows the house all the way to closing.</p></section>
 
-    <section class="stats"><div class="wrap"><div class="cap eyebrow reveal">Where the market is</div><div class="stats__row"><div class="reveal"><div class="stat__n">$2,287,225</div><div class="cap stat__k">Westlake median asking</div><p>78746, the deepest luxury market we cover</p></div><div class="reveal"><div class="stat__n">80</div><div class="cap stat__k">Days on market, Westlake</div><p>Tarrytown runs 70; Lakeway runs 101</p></div><div class="reveal"><div class="stat__n">2.4&times;</div><div class="cap stat__k">Average against median</div><p>River Place and Lake Austin north, where the top of the market reaches furthest</p></div></div></div></section>
+    <section class="cflip"><div class="wrap">
+      <div class="cap eyebrow reveal">Where the market is</div>
+      <div class="cf-chips reveal"><button type="button" class="cf-chip" data-i="0">West Lake Hills</button><button type="button" class="cf-chip" data-i="1">Bee Cave</button><button type="button" class="cf-chip" data-i="2">Dripping Springs</button><button type="button" class="cf-chip" data-i="3">Lakeway</button><button type="button" class="cf-chip" data-i="4">Austin</button><button type="button" class="cf-chip" data-i="5">Leander</button><button type="button" class="cf-chip" data-i="6">Cedar Park</button><button type="button" class="cf-chip" data-i="7">Georgetown</button><button type="button" class="cf-chip" data-i="8">Round Rock</button><button type="button" class="cf-chip" data-i="9">Pflugerville</button><button type="button" class="cf-chip" data-i="10">Buda</button><button type="button" class="cf-chip" data-i="11">San Marcos</button><button type="button" class="cf-chip" data-i="12">Hutto</button><button type="button" class="cf-chip" data-i="13">Manor</button><button type="button" class="cf-chip" data-i="14">Kyle</button></div>
+      <div class="cf-card reveal">
+        <button type="button" class="cf-nav prev" aria-label="Previous city">&#8249;</button>
+        <div class="cf-body">
+          <div class="cf-city"><span class="display cf-name"></span><small class="cap cf-meta"></small></div>
+          <div class="stats__row cf-row">
+            <div><div class="stat__n cf-median"></div><div class="cap stat__k">Median asking</div></div>
+            <div><div class="stat__n cf-psf"></div><div class="cap stat__k">Per square foot</div></div>
+            <div><div class="stat__n cf-dom"></div><div class="cap stat__k">Days on market</div></div>
+          </div>
+          <div class="cf-sub"><span>Average asking <b class="cf-avg"></b></span><span>Active listings <b class="cf-active"></b></span><span>Took a price cut <b class="cf-cut"></b></span></div>
+        </div>
+        <button type="button" class="cf-nav next" aria-label="Next city">&#8250;</button>
+      </div>
+      <p class="z-src reveal">Asking prices across active listings. City figures combine each city's ZIP codes, weighted by active listings. Source: Realtor.com&reg; Research, September 2026.</p>
+    </div></section>
+    <script>(function(){
+      const C=[{"name": "West Lake Hills", "county": "Travis", "zips": "78746", "median": 2287225.0, "avg": 3426669.0, "psf": 660, "dom": 80, "active": 114, "cut": 18}, {"name": "Bee Cave", "county": "Travis", "zips": "78738", "median": 1019250.0, "avg": 1496222.0, "psf": 302, "dom": 86, "active": 223, "cut": 25}, {"name": "Dripping Springs", "county": "Hays", "zips": "78620", "median": 831000.0, "avg": 1278693.0, "psf": 300, "dom": 92, "active": 204, "cut": 18}, {"name": "Lakeway", "county": "Travis", "zips": "78734", "median": 778450.0, "avg": 1150695.0, "psf": 312, "dom": 101, "active": 244, "cut": 25}, {"name": "Austin", "county": "Travis", "zips": "40 ZIP codes", "median": 584000.0, "avg": 758000.0, "psf": 361, "dom": 78, "active": 4095, "cut": 25}, {"name": "Leander", "county": "Williamson", "zips": "78641, 78645", "median": 496000.0, "avg": 744000.0, "psf": 223, "dom": 91, "active": 890, "cut": 28}, {"name": "Cedar Park", "county": "Williamson", "zips": "78613", "median": 477750.0, "avg": 554334.0, "psf": 213, "dom": 67, "active": 225, "cut": 32}, {"name": "Georgetown", "county": "Williamson", "zips": "78626, 78628, 78633", "median": 445000.0, "avg": 527000.0, "psf": 202, "dom": 77, "active": 956, "cut": 27}, {"name": "Round Rock", "county": "Williamson", "zips": "78664, 78665, 78681", "median": 411000.0, "avg": 478000.0, "psf": 198, "dom": 73, "active": 637, "cut": 34}, {"name": "Pflugerville", "county": "Travis", "zips": "78660", "median": 376500.0, "avg": 415095.0, "psf": 183, "dom": 69, "active": 457, "cut": 40}, {"name": "Buda", "county": "Hays", "zips": "78610", "median": 363620.0, "avg": 403316.0, "psf": 179, "dom": 73, "active": 236, "cut": 25}, {"name": "San Marcos", "county": "Hays", "zips": "78666", "median": 354358.0, "avg": 456644.0, "psf": 197, "dom": 88, "active": 436, "cut": 30}, {"name": "Hutto", "county": "Williamson", "zips": "78634", "median": 339445.0, "avg": 397940.0, "psf": 172, "dom": 74, "active": 325, "cut": 42}, {"name": "Manor", "county": "Travis", "zips": "78653", "median": 331990.0, "avg": 400791.0, "psf": 171, "dom": 80, "active": 275, "cut": 21}, {"name": "Kyle", "county": "Hays", "zips": "78640", "median": 321950.0, "avg": 350093.0, "psf": 167, "dom": 80, "active": 445, "cut": 31}], root=document.currentScript.previousElementSibling;
+      const $=s=>root.querySelector(s), f=n=>'$'+Math.round(n).toLocaleString('en-US');
+      let i=0, t;
+      function show(k){ i=(k+C.length)%C.length; const c=C[i];
+        $('.cf-name').textContent=c.name; $('.cf-meta').textContent=c.county+' County · '+c.zips;
+        $('.cf-median').textContent=f(c.median); $('.cf-psf').textContent='$'+c.psf; $('.cf-dom').textContent=c.dom;
+        $('.cf-avg').textContent=f(c.avg); $('.cf-active').textContent=c.active.toLocaleString('en-US'); $('.cf-cut').textContent=c.cut+'%';
+        root.querySelectorAll('.cf-chip').forEach((b,j)=>b.classList.toggle('on',j===i));
+        const on=root.querySelector('.cf-chip.on'); if(on) on.parentNode.scrollTo({left:on.offsetLeft-on.parentNode.offsetWidth/2+on.offsetWidth/2,behavior:'smooth'});
+        $('.cf-body').classList.remove('flip'); void $('.cf-body').offsetWidth; $('.cf-body').classList.add('flip'); }
+      root.querySelectorAll('.cf-chip').forEach(b=>b.onclick=()=>{show(+b.dataset.i);stop();});
+      $('.prev').onclick=()=>{show(i-1);stop();}; $('.next').onclick=()=>{show(i+1);stop();};
+      let x0=null; $('.cf-card').addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+      $('.cf-card').addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40){show(i+(d<0?1:-1));stop();}x0=null;});
+      function stop(){clearInterval(t);}
+      show(0); t=setInterval(()=>show(i+1),4500);
+    })();</script>
 
     <section class="ztable"><div class="wrap">
       <p class="reveal z-intro">The ZIP codes we work in, ranked by what sellers are asking across active listings. The <i>tail</i> column is the average asking price divided by the median, which shows how far the top of each market stretches above the middle.</p>
